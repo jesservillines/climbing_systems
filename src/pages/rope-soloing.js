@@ -124,13 +124,15 @@ export default function RopeSoloing() {
   return (
     <div>
       <Head>
-        <title>Lead Rope Soloing | Climbing Systems</title>
+        <title>Lead Rope Soloing | AlpinistHub</title>
         <meta name="description" content="Comprehensive guide to lead rope soloing systems, techniques, and safety" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <nav className="navbar">
-        <h1>Climbing Systems</h1>
+        <div className="logo-container">
+          <img src="/images/alpinisthub-logo.svg" alt="AlpinistHub Logo" className="site-logo" />
+        </div>
         <ul>
           <li>
             <Link href="/">Home</Link>
@@ -183,7 +185,7 @@ export default function RopeSoloing() {
       </div>
 
       <footer className="container" style={{ textAlign: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
-        <p>&copy; {new Date().getFullYear()} Climbing Systems. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} AlpinistHub.com. All rights reserved.</p>
       </footer>
     </div>
   );

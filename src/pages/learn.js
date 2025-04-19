@@ -26,13 +26,15 @@ export default function Learn() {
   return (
     <div>
       <Head>
-        <title>Educational Resources | Climbing Systems</title>
-        <meta name="description" content="Educational resources, glossary, quizzes, and common mistakes for climbing systems" />
+        <title>Educational Resources | AlpinistHub</title>
+        <meta name="description" content="Educational resources, glossary, quizzes, and common mistakes for climbing and alpine techniques" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <nav className="navbar">
-        <h1>Climbing Systems</h1>
+        <div className="logo-container">
+          <img src="/images/alpinisthub-logo.svg" alt="AlpinistHub Logo" className="site-logo" />
+        </div>
         <ul>
           <li>
             <Link href="/">Home</Link>
@@ -137,7 +139,7 @@ export default function Learn() {
       </div>
 
       <footer className="container" style={{ textAlign: 'center', marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
-        <p>&copy; {new Date().getFullYear()} Climbing Systems. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} AlpinistHub.com. All rights reserved.</p>
       </footer>
 
       <style jsx>{`

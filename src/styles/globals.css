@@ -1,9 +1,9 @@
 /* Global styles */
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --dark-color: #2c3e50;
-  --light-color: #ecf0f1;
+  --primary-color: #f39c12; /* Orange from logo */
+  --secondary-color: #f5f5f0; /* Off-white from logo text */
+  --dark-color: #000000; /* Black background from logo */
+  --light-color: #f5f5f0; /* Off-white from logo text */
   --danger-color: #e74c3c;
   --warning-color: #f39c12;
 }
@@ -52,14 +52,16 @@ p {
 .btn {
   display: inline-block;
   background: var(--primary-color);
-  color: white;
+  color: black;
+  font-weight: bold;
   padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-right: 0.5rem;
-  transition: opacity 0.2s ease-in;
+  transition: all 0.2s ease-in;
   outline: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .btn:hover {
@@ -106,14 +108,26 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1;
   width: 100%;
   background-color: var(--dark-color);
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--secondary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.site-logo {
+  height: 50px;
+  width: auto;
 }
 
 .navbar ul {

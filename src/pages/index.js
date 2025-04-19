@@ -6,13 +6,15 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Climbing Systems | Home</title>
+        <title>AlpinistHub | Home</title>
         <meta name="description" content="Expert information about climbing systems, techniques, and safety guides" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <nav className="navbar">
-        <h1>Climbing Systems</h1>
+        <div className="logo-container">
+          <img src="/images/alpinisthub-logo.svg" alt="AlpinistHub Logo" className="site-logo" />
+        </div>
         <ul>
           <li>
             <Link href="/">Home</Link>
@@ -27,14 +29,17 @@ export default function Home() {
       </nav>
 
       <main className="container">
-        <section className="card">
-          <h1>Welcome to Climbing Systems</h1>
+        <header className="hero">
+          <h1>Welcome to AlpinistHub</h1>
           <p>
-            Your comprehensive resource for climbing techniques, systems, and safety information.
+            Your comprehensive resource for understanding, setting up, and safely using
+            various climbing systems and techniques.
+          </p>
+          <p>
             Explore our guides to learn about different climbing methods, equipment recommendations,
             and best practices for staying safe while climbing.
           </p>
-        </section>
+        </header>
         
         {/* New Featured Section - Educational Resources */}
         <div className="new-feature-highlight" style={{ 

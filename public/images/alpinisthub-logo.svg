@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#000000" />
+  
+  <!-- AlpinistHub Text -->
+  <text x="70" y="330" font-family="Arial, sans-serif" font-weight="bold" font-size="140" fill="#f5f5f0">Alpinist</text>
+  
+  <!-- Hub Box -->
+  <rect x="635" y="190" width="230" height="130" rx="15" fill="#f39c12" />
+  
+  <!-- Mountain Peak -->
+  <path d="M750 190 L805 90 L860 190 L750 190" fill="#f5f5f0" />
+  <path d="M735 190 L760 150 L790 190 Z" fill="#f5f5f0" />
+  
+  <!-- Hub Text -->
+  <text x="665" y="290" font-family="Arial, sans-serif" font-weight="bold" font-size="100" fill="#000000">Hub</text>
+  
+  <!-- .com Text -->
+  <text x="750" y="370" font-family="Arial, sans-serif" font-weight="bold" font-size="100" fill="#f5f5f0" text-anchor="middle">.com</text>
+</svg>
