@@ -131,7 +131,7 @@ export default function RopeSoloing() {
 
       <nav className="navbar">
         <div className="logo-container">
-          <img src="/images/alpinisthub-logo.svg" alt="AlpinistHub Logo" className="site-logo" />
+          <img src="/images/alpinisthub.png" alt="AlpinistHub Logo" className="site-logo" />
         </div>
         <ul>
           <li>
