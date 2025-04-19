@@ -1,8 +1,17 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
+import HamburgerMenu from '../components/shared/HamburgerMenu';
 
 export default function Home() {
+  // Define navigation items for both desktop and mobile menus
+  const navItems = [
+    { href: '/', label: 'Home', icon: '/icons/mountain.png' },
+    { href: '/big-wall-aid', label: 'Big Wall & Aid', icon: '/icons/mountain_destination.png' },
+    { href: '/rope-soloing', label: 'Rope Soloing', icon: '/icons/carabiner.png' },
+    { href: '/learn', label: 'Learn', icon: '/icons/helmet.png' },
+    { href: '/shop', label: 'Shop', icon: '/icons/mountain_destination.png' },
+  ];
   return (
     <div>
       <Head>
@@ -17,7 +26,8 @@ export default function Home() {
             <img src="/images/alpinisthub.png" alt="AlpinistHub Logo" className="site-logo" />
           </Link>
         </div>
-        <ul>
+        {/* Desktop Navigation */}
+        <ul className="desktop-nav">
           <li>
             <Link href="/" className="active">
               <img src="/icons/mountain.png" alt="" className="nav-icon" width={20} height={20} />
@@ -48,8 +58,10 @@ export default function Home() {
               Shop
             </Link>
           </li>
-
         </ul>
+        
+        {/* Mobile Hamburger Menu */}
+        <HamburgerMenu navItems={navItems} />
       </nav>
 
       <main className="container" style={{ position: 'relative' }}>
@@ -153,7 +165,23 @@ export default function Home() {
               Explore Techniques
             </Link>
           </div>
-          
+
+          <div className="card">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+              <img src="/icons/mountain_destination.png" alt="Big Wall & Aid icon" width={30} height={30} style={{ objectFit: 'contain' }} />
+              <h2 style={{ margin: 0 }}>Big Wall & Aid Climbing</h2>
+            </div>
+            <p>
+              Discover the world of big wall and aid climbing. Explore multi-day ascents, specialized gear, advanced techniques, and safety practices for tackling the largest rock faces.
+            </p>
+            <Link href="/big-wall-aid" className="btn">
+              <span className="btn-icon-wrapper">
+                <img src="/icons/mountain_destination.png" alt="" className="btn-icon" />
+              </span>
+              Explore Big Wall & Aid
+            </Link>
+          </div>
+
           <div className="card">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
               <img src="/icons/helmet.png" alt="Helmet icon" width={30} height={30} style={{ objectFit: 'contain' }} />

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import KnowledgeLevelToggle from '../components/shared/KnowledgeLevelToggle';
 import TabNavigator from '../components/shared/TabNavigator';
+import HamburgerMenu from '../components/shared/HamburgerMenu';
 
 // Import components
 import Introduction from '../components/big-wall-aid/Introduction';
@@ -20,6 +21,15 @@ import AidClimbingDiagram from '../components/big-wall-aid/AidClimbingDiagram';
 
 export default function BigWallAid() {
   const [knowledgeLevel, setKnowledgeLevel] = useState('intermediate');
+  
+  // Define navigation items for both desktop and mobile menus
+  const navItems = [
+    { href: '/', label: 'Home', icon: '/icons/mountain.png' },
+    { href: '/big-wall-aid', label: 'Big Wall & Aid', icon: '/icons/mountain_destination.png' },
+    { href: '/rope-soloing', label: 'Rope Soloing', icon: '/icons/carabiner.png' },
+    { href: '/learn', label: 'Learn', icon: '/icons/helmet.png' },
+    { href: '/shop', label: 'Shop', icon: '/icons/mountain_destination.png' },
+  ];
   
   // Store knowledge level preference in localStorage
   useEffect(() => {
@@ -119,7 +129,13 @@ export default function BigWallAid() {
             <img src="/images/alpinisthub.png" alt="AlpinistHub Logo" className="site-logo" />
           </Link>
         </div>
-        <ul className="nav-links">
+        <ul className="desktop-nav nav-links">
+          <li>
+            <Link href="/">
+              <img src="/icons/mountain.png" alt="" className="nav-icon" width={20} height={20} />
+              Home
+            </Link>
+          </li>
           <li>
             <Link href="/big-wall-aid">
               <img src="/icons/mountain_destination.png" alt="" className="nav-icon" width={20} height={20} />
@@ -145,6 +161,9 @@ export default function BigWallAid() {
             </Link>
           </li>
         </ul>
+        
+        {/* Mobile Hamburger Menu */}
+        <HamburgerMenu navItems={navItems} />
       </nav>
 
       <div className="container" style={{ marginTop: '2rem' }}>
