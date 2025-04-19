@@ -92,7 +92,7 @@ export default function Home() {
         </div>
         
         <header className="hero">
-          <h1>Welcome to AlpinistHub</h1>
+          <h1>Welcome to <span style={{ color: 'var(--primary-color)' }}>Alpinist</span><span style={{ color: '#444444' }}>Hub</span></h1>
           <p>
             Your comprehensive resource for understanding, setting up, and safely using
             various climbing systems and techniques.
@@ -115,7 +115,7 @@ export default function Home() {
         }}>
           <div style={{ display: 'flex', alignItems: 'flex-start' }}>
             <div>
-              <h2 style={{ marginTop: 0 }}>AlpinistHub Stickers Now Available!</h2>
+              <h2 style={{ marginTop: 0 }}><span style={{ color: 'var(--primary-color)' }}>Alpinist</span><span style={{ color: '#444444' }}>Hub</span> Stickers Now Available!</h2>
               <p>
                 Show your climbing passion with our exclusive collection of climbing-themed stickers. 
                 From "Beta Spray" to "Send Train", express your climbing identity with our high-quality, 

@@ -225,10 +225,13 @@ p {
   top: 0;
   z-index: 10;
   width: 100%;
+  left: 0;
+  right: 0;
   background-color: var(--dark-color);
   color: var(--secondary-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid var(--primary-color);
+  box-sizing: border-box;
 }
 
 .logo-container {
@@ -742,6 +745,11 @@ p {
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    width: 100vw;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
   }
   .navbar ul.desktop-nav {
     display: none;
