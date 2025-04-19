@@ -162,7 +162,7 @@ export default function RopeSoloing() {
           </li>
           <li>
             <Link href="/shop">
-              <img src="/icons/mountain_destination.png" alt="" className="nav-icon" width={20} height={20} />
+              <img src="/icons/shop.png" alt="" className="nav-icon" width={20} height={20} />
               Shop
             </Link>
           </li>
@@ -233,7 +233,7 @@ export default function RopeSoloing() {
             Learn
           </Link>
           <Link href="/shop" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <img src="/icons/mountain_destination.png" width={20} height={20} alt="Shop" />
+            <img src="/icons/shop.png" width={20} height={20} alt="Shop" />
             Shop
           </Link>
         </div>

@@ -10,7 +10,7 @@ export default function Home() {
     { href: '/big-wall-aid', label: 'Big Wall & Aid', icon: '/icons/mountain_destination.png' },
     { href: '/rope-soloing', label: 'Rope Soloing', icon: '/icons/carabiner.png' },
     { href: '/learn', label: 'Learn', icon: '/icons/helmet.png' },
-    { href: '/shop', label: 'Shop', icon: '/icons/mountain_destination.png' },
+    { href: '/shop', label: 'Shop', icon: '/icons/shop.png' },
   ];
   return (
     <div>
@@ -54,7 +54,7 @@ export default function Home() {
           </li>
           <li>
             <Link href="/shop">
-              <img src="/icons/mountain_destination.png" alt="" className="nav-icon" width={20} height={20} />
+              <img src="/icons/shop.png" alt="" className="nav-icon" width={20} height={20} />
               Shop
             </Link>
           </li>
@@ -114,22 +114,6 @@ export default function Home() {
           border: '1px solid var(--primary-color)'
         }}>
           <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <div style={{ 
-              backgroundColor: 'var(--primary-color)', 
-              color: 'black', 
-              padding: '0.2rem 0.5rem', 
-              borderRadius: '4px', 
-              fontSize: '0.8rem',
-              fontWeight: 'bold',
-              marginRight: '1rem',
-              marginTop: '0.2rem',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px'
-            }}>
-              <img src="/icons/mountain_destination.png" width={16} height={16} alt="" />
-              SHOP
-            </div>
             <div>
               <h2 style={{ marginTop: 0 }}>AlpinistHub Stickers Now Available!</h2>
               <p>
@@ -139,7 +123,7 @@ export default function Home() {
               </p>
               <Link href="/shop" className="btn">
                 <span className="btn-icon-wrapper">
-                  <img src="/icons/mountain_destination.png" alt="" className="btn-icon" />
+                  <img src="/icons/shop.png" alt="" className="btn-icon" />
                 </span>
                 Check Out The Shop
               </Link>

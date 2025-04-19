@@ -2,8 +2,18 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
+import HamburgerMenu from '../components/shared/HamburgerMenu';
 
 export default function Shop() {
+  // Define navigation items for both desktop and mobile menus
+  const navItems = [
+    { href: '/', label: 'Home', icon: '/icons/mountain.png' },
+    { href: '/big-wall-aid', label: 'Big Wall & Aid', icon: '/icons/mountain_destination.png' },
+    { href: '/rope-soloing', label: 'Rope Soloing', icon: '/icons/carabiner.png' },
+    { href: '/learn', label: 'Learn', icon: '/icons/helmet.png' },
+    { href: '/shop', label: 'Shop', icon: '/icons/shop.png' },
+  ];
+  
   // State for shopping cart
   const [cart, setCart] = useState([]);
   
@@ -193,7 +203,7 @@ export default function Shop() {
             <img src="/images/alpinisthub.png" alt="AlpinistHub Logo" className="site-logo" />
           </Link>
         </div>
-        <ul>
+        <ul className="desktop-nav">
           <li>
             <Link href="/">
               <img src="/icons/mountain.png" alt="" className="nav-icon" />
@@ -220,11 +230,14 @@ export default function Shop() {
           </li>
           <li>
             <Link href="/shop" className="active">
-              <img src="/icons/mountain_destination.png" alt="" className="nav-icon" />
+              <img src="/icons/shop.png" alt="" className="nav-icon" width={20} height={20} />
               Shop
             </Link>
           </li>
         </ul>
+        
+        {/* Mobile Hamburger Menu */}
+        <HamburgerMenu navItems={navItems} />
       </nav>
 
       <main className="container">
@@ -459,7 +472,7 @@ export default function Shop() {
             Learn
           </Link>
           <Link href="/shop" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <img src="/icons/mountain_destination.png" width={20} height={20} alt="Shop" />
+            <img src="/icons/shop.png" width={20} height={20} alt="Shop" />
             Shop
           </Link>
         </div>

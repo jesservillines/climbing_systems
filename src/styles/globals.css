@@ -487,6 +487,7 @@ p {
   display: none;
   position: relative;
   z-index: 1000;
+  margin-left: auto;
 }
 
 .hamburger-button {
