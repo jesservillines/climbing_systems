@@ -41,12 +41,6 @@ export default function Learn() {
             <Link href="/rope-soloing">Rope Soloing</Link>
           </li>
           <li>
-            <Link href="/equipment">Equipment</Link>
-          </li>
-          <li>
-            <Link href="/safety">Safety</Link>
-          </li>
-          <li>
             <Link href="/learn">Learn</Link>
           </li>
         </ul>

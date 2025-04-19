@@ -21,12 +21,6 @@ export default function Home() {
             <Link href="/rope-soloing">Rope Soloing</Link>
           </li>
           <li>
-            <Link href="/equipment">Equipment</Link>
-          </li>
-          <li>
-            <Link href="/safety">Safety</Link>
-          </li>
-          <li>
             <Link href="/learn">Learn</Link>
           </li>
         </ul>
@@ -94,31 +88,10 @@ export default function Home() {
             <p>
               Learn about the practice of climbing and belaying yourself on lead,
               without a partner. Understand the systems, techniques, and safety considerations.
+              Includes equipment guides and safety information.
             </p>
             <Link href="/rope-soloing" className="btn">
-              Learn More
-            </Link>
-          </div>
-          
-          <div className="card">
-            <h2>Equipment Guide</h2>
-            <p>
-              Detailed information about the gear required for different climbing systems,
-              including device comparisons and recommendations.
-            </p>
-            <Link href="/equipment" className="btn">
-              Explore Gear
-            </Link>
-          </div>
-          
-          <div className="card">
-            <h2>Safety Guidelines</h2>
-            <p>
-              Critical safety information, risk management strategies, and insights from
-              experienced climbers and guides.
-            </p>
-            <Link href="/safety" className="btn">
-              Learn Safety
+              Explore Techniques
             </Link>
           </div>
           
