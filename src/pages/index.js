@@ -52,9 +52,9 @@ export default function Home() {
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '80%',
-          height: '80%',
-          opacity: '0.05',
+          width: '100%',
+          height: '100%',
+          opacity: '0.15',
           zIndex: '-1',
           pointerEvents: 'none',
           display: 'flex',
@@ -67,7 +67,8 @@ export default function Home() {
             style={{ 
               maxWidth: '100%',
               maxHeight: '100%',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              transform: 'scale(2.0)'
             }} 
           />
         </div>
@@ -85,39 +86,23 @@ export default function Home() {
         </header>
         
         {/* New Featured Section - Educational Resources */}
-        <div className="new-feature-highlight" style={{ 
-          padding: '1.5rem', 
-          backgroundColor: 'rgba(243, 156, 18, 0.1)', 
-          borderRadius: '5px',
-          marginBottom: '2rem',
-          border: '1px solid var(--primary-color)'
-        }}>
+        <div className="new-feature-highlight" style={{ padding: '1.5rem', backgroundColor: 'rgba(243, 156, 18, 0.1)', borderRadius: '5px', marginBottom: '2rem', border: '1px solid var(--primary-color)' }}>
           <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <div style={{ 
-              backgroundColor: 'var(--primary-color)', 
-              color: 'black', 
-              padding: '0.2rem 0.5rem', 
-              borderRadius: '4px', 
-              fontSize: '0.8rem',
-              fontWeight: 'bold',
-              marginRight: '1rem',
-              marginTop: '0.2rem',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px'
-            }}>
+            <div style={{ backgroundColor: 'var(--primary-color)', color: 'black', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold', marginRight: '1rem', marginTop: '0.2rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
               <img src="/icons/join_now.png" width={16} height={16} alt="" />
               NEW
             </div>
             <div>
-              <h2 style={{ marginTop: 0 }}>New Educational Resources Available!</h2>
+              <div className="icon-title" style={{ marginTop: 0, marginBottom: '0.5rem' }}>
+                <img src="/icons/helmet.png" alt="Education" />
+                <h2 style={{ margin: 0 }}>New Educational Resources Available!</h2>
+              </div>
               <p>
-                Explore our new interactive learning tools, including a comprehensive
-                climbing glossary, knowledge quizzes, and visual guides to avoid common
-                mistakes.
+                Explore our new interactive learning tools, including a comprehensive climbing glossary,
+                knowledge quizzes, and visual guides to avoid common mistakes.
               </p>
               <Link href="/learn" className="btn">
-                <img src="/icons/helmet.png" width={20} height={20} alt="" style={{ marginRight: '8px' }} />
+                <img src="/icons/helmet.png" alt="" />
                 Explore Educational Resources
               </Link>
             </div>
@@ -126,9 +111,9 @@ export default function Home() {
 
         <div className="grid">
           <div className="card">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <img src="/icons/carabiner.png" alt="Carabiner icon" width={30} height={30} style={{ objectFit: 'contain' }} />
-              <h2 style={{ margin: 0 }}>Lead Rope Soloing</h2>
+            <div className="icon-title">
+              <img src="/icons/carabiner.png" alt="Carabiner icon" />
+              <h2>Lead Rope Soloing</h2>
             </div>
             <p>
               Learn about the practice of climbing and belaying yourself on lead,
@@ -136,22 +121,22 @@ export default function Home() {
               Includes equipment guides and safety information.
             </p>
             <Link href="/rope-soloing" className="btn">
-              <img src="/icons/mountain_destination.png" alt="" width={20} height={20} style={{ marginRight: '8px' }} />
+              <img src="/icons/mountain_destination.png" alt="" />
               Explore Techniques
             </Link>
           </div>
           
           <div className="card">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <img src="/icons/helmet.png" alt="Helmet icon" width={30} height={30} style={{ objectFit: 'contain' }} />
-              <h2 style={{ margin: 0 }}>Educational Resources</h2>
+            <div className="icon-title">
+              <img src="/icons/helmet.png" alt="Helmet icon" />
+              <h2>Educational Resources</h2>
             </div>
             <p>
               Interactive learning tools including a climbing glossary, knowledge quizzes, 
               and visual guides to avoid common climbing mistakes.
             </p>
             <Link href="/learn" className="btn">
-              <img src="/icons/axe_comment.png" alt="" width={20} height={20} style={{ marginRight: '8px' }} />
+              <img src="/icons/axe_comment.png" alt="" />
               Start Learning
             </Link>
           </div>
