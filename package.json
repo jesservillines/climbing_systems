@@ -8,14 +8,22 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "export": "next export"
   },
-  "keywords": ["climbing", "rope soloing", "climbing systems", "climbing safety"],
+  "keywords": [
+    "climbing",
+    "rope soloing",
+    "climbing systems",
+    "climbing safety"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "next": "^14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.10.7"
   }
 }
