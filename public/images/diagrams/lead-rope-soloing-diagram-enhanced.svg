@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1000" height="1800" viewBox="0 0 1000 1800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Enhanced background with lighter gradient for better readability -->
+  <defs>
+    <linearGradient id="rockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e0d8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d0c4b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="loadRopeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brakeRopeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c0392b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#876a58;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6e563f;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Enhanced patterns -->
+    <pattern id="grigriPattern" patternUnits="userSpaceOnUse" width="50" height="50">
+      <rect width="50" height="50" fill="#c0392b"/>
+      <circle cx="25" cy="25" r="15" fill="#e74c3c"/>
+      <circle cx="25" cy="25" r="8" fill="#ecf0f1"/>
+    </pattern>
+    
+    <pattern id="chestHarnessPattern" patternUnits="userSpaceOnUse" width="20" height="20">
+      <rect width="20" height="20" fill="none"/>
+      <path d="M0,10 L20,10 M10,0 L10,20" stroke="#34495e" stroke-width="2"/>
+    </pattern>
+    
+    <!-- Improved arrow markers -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="white"/>
+    </marker>
+    
+    <!-- Text Shadow Filter -->
+    <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="white" flood-opacity="0.8"/>
+    </filter>
+    
+    <!-- Glow Effect for Hotspots -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#3498db" flood-opacity="0.7" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feComposite in="SourceGraphic" in2="glow" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Enhanced Rock Face Background -->
+  <rect x="0" y="0" width="1000" height="1800" fill="url(#rockGradient)"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="1600" width="1000" height="200" fill="url(#groundGradient)"/>
+  
+  <!-- Title and description with enhanced typography -->
+  <g filter="url(#textShadow)">
+    <text x="500" y="80" font-family="Arial, Helvetica, sans-serif" font-size="40" text-anchor="middle" fill="#2c3e50" font-weight="bold">Lead Rope Soloing: Complete System Diagram</text>
+    <text x="500" y="130" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle" fill="#34495e">Shows proper setup with a GriGri, backup knots, and required equipment</text>
+  </g>
+
+  <!-- Progress Path with improved visibility -->
+  <path d="M500,1540 L500,1200 L650,1200 L650,1000 L500,1000 L500,600" stroke="white" stroke-width="4" stroke-dasharray="15,10" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Anchor setup at the bottom - made more visually prominent -->
+  <g id="groundAnchor">
+    <rect x="450" y="1550" width="100" height="50" rx="10" fill="#7f8c8d" stroke="#2c3e50" stroke-width="2"/>
+    <text x="500" y="1580" font-family="Arial, Helvetica, sans-serif" font-size="16" text-anchor="middle" fill="white" font-weight="bold">ANCHOR</text>
+    
+    <!-- Master point -->
+    <circle cx="500" cy="1540" r="12" fill="#e74c3c" stroke="white" stroke-width="2"/>
+    
+    <!-- Upward pull directional -->
+    <line x1="480" y1="1530" x2="450" y2="1500" stroke="#3498db" stroke-width="5"/>
+    <circle cx="450" cy="1500" r="10" fill="#3498db" stroke="white" stroke-width="1.5"/>
+    <text x="435" y="1490" font-family="Arial, Helvetica, sans-serif" font-size="14" text-anchor="end" fill="#2c3e50" filter="url(#textShadow)">Upward Pull Protection</text>
+  </g>
+
+  <!-- Rope tied to anchor -->
+  <path d="M500,1540 C500,1540 505,1525 500,1520 C495,1515 490,1510 495,1500" stroke="url(#loadRopeGradient)" stroke-width="7" fill="none"/>
+  <text x="530" y="1520" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" filter="url(#textShadow)">Figure-8 Knot</text>
+
+  <!-- Primary Climbing Figure (at start of climb) with enhanced detail -->
+  <g id="climberStart">
+    <!-- Harness -->
+    <rect x="480" y="1400" width="40" height="15" rx="3" fill="#3498db" stroke="#2c3e50" stroke-width="1.5"/>
+    
+    <!-- Body -->
+    <rect x="490" y="1350" width="20" height="50" rx="5" fill="#f5b041" stroke="#d35400" stroke-width="1.5"/>
+    <circle cx="500" cy="1340" r="15" fill="#f5b041" stroke="#d35400" stroke-width="1.5"/>
+    
+    <!-- Arms -->
+    <line x1="490" y1="1360" x2="470" y2="1370" stroke="#f5b041" stroke-width="10" stroke-linecap="round"/>
+    <line x1="510" y1="1360" x2="530" y2="1370" stroke="#f5b041" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Legs -->
+    <line x1="495" y1="1400" x2="485" y2="1430" stroke="#f5b041" stroke-width="10" stroke-linecap="round"/>
+    <line x1="505" y1="1400" x2="515" y2="1430" stroke="#f5b041" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Chest Harness - more visible -->
+    <rect x="485" y="1355" width="30" height="25" rx="2" fill="url(#chestHarnessPattern)" stroke="#34495e" stroke-width="2.5"/>
+    
+    <!-- GriGri on Chest - more detailed -->
+    <rect x="490" y="1365" width="20" height="20" rx="3" fill="url(#grigriPattern)" stroke="#7f8c8d" stroke-width="2"/>
+    <circle cx="500" cy="1375" r="5" fill="#ecf0f1"/>
+    <text x="540" y="1375" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" filter="url(#textShadow)">GriGri</text>
+    
+    <!-- Rope bag on side -->
+    <rect x="530" y="1390" width="30" height="25" rx="3" fill="#9b59b6" stroke="#8e44ad" stroke-width="1.5"/>
+    <text x="545" y="1430" font-family="Arial, Helvetica, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50" font-weight="bold" filter="url(#textShadow)">Rope Bag</text>
+  </g>
+
+  <!-- Main climbing rope from anchor to climber - enhanced colors -->
+  <!-- Load strand (green) with increased visibility -->
+  <path d="M495,1500 C495,1490 480,1480 490,1470 C500,1460 520,1450 510,1440 C500,1430 485,1420 495,1410 C505,1400 510,1387 500,1375" stroke="url(#loadRopeGradient)" stroke-width="8" fill="none" stroke-dasharray="0"/>
+  <text x="430" y="1450" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#27ae60" font-weight="bold" filter="url(#textShadow)">LOAD STRAND</text>
+  <text x="430" y="1470" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" filter="url(#textShadow)">Runs from anchor to device's "climber side"</text>
+
+  <!-- First Piece of Pro - more visible -->
+  <rect x="515" y="1300" width="15" height="30" rx="2" fill="#f1c40f" stroke="#f39c12" stroke-width="1.5"/>
+  <circle cx="522" cy="1290" r="10" fill="#f1c40f" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="555" y="1300" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" filter="url(#textShadow)">First Protection</text>
+  <text x="555" y="1320" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" filter="url(#textShadow)">("Jesus Piece")</text>
+
+  <!-- Rope continuing up through first piece -->
+  <path d="M500,1375 C495,1365 500,1355 510,1345 C520,1335 525,1315 522,1290" stroke="url(#loadRopeGradient)" stroke-width="8" fill="none"/>
+
+  <!-- Second climber position (higher up) -->
+  <g id="climberHigher" transform="translate(0, -250)">
+    <!-- Harness -->
+    <rect x="480" y="1400" width="40" height="15" rx="3" fill="#3498db" stroke="#2c3e50" stroke-width="1.5"/>
+    
+    <!-- Body -->
+    <rect x="490" y="1350" width="20" height="50" rx="5" fill="#f5b041" stroke="#d35400" stroke-width="1.5"/>
+    <circle cx="500" cy="1340" r="15" fill="#f5b041" stroke="#d35400" stroke-width="1.5"/>
+    
+    <!-- Arms -->
+    <line x1="490" y1="1360" x2="470" y2="1370" stroke="#f5b041" stroke-width="10" stroke-linecap="round"/>
+    <line x1="510" y1="1360" x2="530" y2="1370" stroke="#f5b041" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Legs -->
+    <line x1="495" y1="1400" x2="485" y2="1430" stroke="#f5b041" stroke-width="10" stroke-linecap="round"/>
+    <line x1="505" y1="1400" x2="515" y2="1430" stroke="#f5b041" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Chest Harness -->
+    <rect x="485" y="1355" width="30" height="25" rx="2" fill="url(#chestHarnessPattern)" stroke="#34495e" stroke-width="2.5"/>
+    
+    <!-- GriGri on Chest -->
+    <rect x="490" y="1365" width="20" height="20" rx="3" fill="url(#grigriPattern)" stroke="#7f8c8d" stroke-width="2"/>
+    <circle cx="500" cy="1375" r="5" fill="#ecf0f1"/>
+  </g>
+
+  <!-- More pieces of pro - enhanced visibility -->
+  <rect x="535" y="1150" width="15" height="30" rx="2" fill="#f1c40f" stroke="#f39c12" stroke-width="1.5"/>
+  <circle cx="542" cy="1140" r="10" fill="#f1c40f" stroke="#f39c12" stroke-width="1.5"/>
+  <rect x="475" y="1050" width="15" height="30" rx="2" fill="#f1c40f" stroke="#f39c12" stroke-width="1.5"/>
+  <circle cx="482" cy="1040" r="10" fill="#f1c40f" stroke="#f39c12" stroke-width="1.5"/>
+  <rect x="525" y="950" width="15" height="30" rx="2" fill="#f1c40f" stroke="#f39c12" stroke-width="1.5"/>
+  <circle cx="532" cy="940" r="10" fill="#f1c40f" stroke="#f39c12" stroke-width="1.5"/>
+
+  <!-- Rope path for higher section - enhanced colors and line width -->
+  <path d="M522,1290 C530,1270 550,1250 545,1230 C540,1210 532,1180 542,1140" stroke="url(#loadRopeGradient)" stroke-width="8" fill="none"/>
+  <path d="M542,1140 C550,1120 535,1100 520,1080 C505,1060 490,1050 482,1040" stroke="url(#loadRopeGradient)" stroke-width="8" fill="none"/>
+  <path d="M482,1040 C475,1025 480,1010 490,995 C500,980 520,960 532,940" stroke="url(#loadRopeGradient)" stroke-width="8" fill="none"/>
+  <path d="M532,940 C540,920 530,900 515,880 C500,860 490,840 500,820" stroke="url(#loadRopeGradient)" stroke-width="8" fill="none"/>
+
+  <!-- Top anchor - more prominent -->
+  <g id="topAnchor">
+    <rect x="450" y="700" width="100" height="50" rx="10" fill="#7f8c8d" stroke="#2c3e50" stroke-width="2"/>
+    <text x="500" y="730" font-family="Arial, Helvetica, sans-serif" font-size="16" text-anchor="middle" fill="white" font-weight="bold">TOP ANCHOR</text>
+    <circle cx="500" cy="765" r="12" fill="#e74c3c" stroke="white" stroke-width="2"/>
+  </g>
+
+  <!-- Free end rope (brake strand) - enhanced red color -->
+  <path d="M500,1375 C510,1365 520,1370 525,1380 C530,1390 535,1410 525,1420 C515,1430 505,1440 515,1450 C525,1460 535,1470 530,1480 C525,1490 515,1500 520,1510 C525,1520 530,1530 525,1540" stroke="url(#brakeRopeGradient)" stroke-width="8" fill="none"/>
+  <text x="600" y="1450" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#c0392b" font-weight="bold" filter="url(#textShadow)">BRAKE STRAND</text>
+  <text x="600" y="1470" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" filter="url(#textShadow)">Free end from device's "brake side"</text>
+
+  <!-- Backup knots on brake strand - more visible -->
+  <circle cx="515" cy="1450" r="12" fill="#e74c3c" stroke="white" stroke-width="2.5"/>
+  <text x="465" y="1450" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" text-anchor="end" filter="url(#textShadow)">Backup Knot</text>
+  <circle cx="530" cy="1480" r="12" fill="#e74c3c" stroke="white" stroke-width="2.5"/>
+  <text x="580" y="1480" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" filter="url(#textShadow)">Figure-8 on a bight</text>
+
+  <!-- Key points for diagram - improved readability -->
+  <g id="infoPoints">
+    <!-- Chest Harness Explanation -->
+    <line x1="390" y1="1355" x2="485" y2="1365" stroke="#2c3e50" stroke-width="1.5" stroke-dasharray="5,5"/>
+    <text x="370" y="1335" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" text-anchor="end" filter="url(#textShadow)">Chest harness keeps</text>
+    <text x="370" y="1355" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" text-anchor="end" filter="url(#textShadow)">GriGri properly oriented</text>
+    
+    <!-- Device Orientation -->
+    <line x1="390" y1="1375" x2="490" y2="1375" stroke="#2c3e50" stroke-width="1.5" stroke-dasharray="5,5"/>
+    <text x="370" y="1375" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" text-anchor="end" filter="url(#textShadow)">GriGri flipped upside-down</text>
+    <text x="370" y="1395" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" text-anchor="end" filter="url(#textShadow)">from normal orientation</text>
+    
+    <!-- First Pro Importance -->
+    <line x1="600" y1="1290" x2="522" y2="1290" stroke="#2c3e50" stroke-width="1.5" stroke-dasharray="5,5"/>
+    <text x="620" y="1290" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" filter="url(#textShadow)">First piece reduces</text>
+    <text x="620" y="1310" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" filter="url(#textShadow)">factor 2 fall danger</text>
+    
+    <!-- Backup System -->
+    <line x1="440" y1="1480" x2="530" y2="1480" stroke="#2c3e50" stroke-width="1.5" stroke-dasharray="5,5"/>
+    <text x="420" y="1480" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" text-anchor="end" filter="url(#textShadow)">Backup knots clipped</text>
+    <text x="420" y="1500" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" text-anchor="end" filter="url(#textShadow)">to harness gear loops</text>
+    
+    <!-- Multi-directional Anchor -->
+    <line x1="350" y1="1550" x2="450" y2="1550" stroke="#2c3e50" stroke-width="1.5" stroke-dasharray="5,5"/>
+    <text x="330" y="1550" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold" text-anchor="end" filter="url(#textShadow)">Multi-directional anchor</text>
+    <text x="330" y="1570" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2c3e50" text-anchor="end" filter="url(#textShadow)">must hold upward pulls</text>
+  </g>
+
+  <!-- Warning box - enhanced design and visibility -->
+  <rect x="100" y="1650" width="350" height="120" rx="10" fill="#c0392b" fill-opacity="0.9" stroke="#e74c3c" stroke-width="2"/>
+  <text x="275" y="1680" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">CRITICAL SAFETY WARNING</text>
+  <text x="275" y="1710" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white" text-anchor="middle">Device orientation is critical - incorrect setup</text>
+  <text x="275" y="1735" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white" text-anchor="middle">WILL NOT catch a fall and could be fatal.</text>
+  <text x="275" y="1760" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white" text-anchor="middle">Always test near ground before committing.</text>
+
+  <!-- Transition Steps between pitches - enhanced visual design -->
+  <g id="transitionInfo">
+    <rect x="50" y="900" width="330" height="200" rx="10" fill="#2c3e50" fill-opacity="0.9" stroke="#34495e" stroke-width="2"/>
+    <text x="215" y="930" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">MULTI-PITCH TRANSITION</text>
+    <text x="70" y="970" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">1. Fix rope at top anchor (redundantly)</text>
+    <text x="70" y="1000" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">2. Remove self-belay device, setup rappel</text>
+    <text x="70" y="1030" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">3. Rappel while cleaning gear</text>
+    <text x="70" y="1060" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">4. Setup ascenders, jumar back up</text>
+    <text x="70" y="1090" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">5. Repeat for next pitch</text>
+  </g>
+
+  <!-- Sequence indicators - more noticeable -->
+  <text x="500" y="1620" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#2c3e50" text-anchor="middle" font-weight="bold" filter="url(#textShadow)">START HERE</text>
+  <path d="M500,1600 L500,1580" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Falling scenario - enhanced readability -->
+  <g id="fallScenario">
+    <rect x="620" y="1000" width="330" height="200" rx="10" fill="#2c3e50" fill-opacity="0.9" stroke="#34495e" stroke-width="2"/>
+    <text x="785" y="1030" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">DURING A FALL</text>
+    <text x="640" y="1070" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">• GriGri will lock automatically</text>
+    <text x="640" y="1100" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">• You'll fall twice the slack distance</text>
+    <text x="640" y="1130" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">• Backup knots prevent catastrophic failure</text>
+    <text x="640" y="1160" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">• Get hand on brake strand immediately</text>
+    <text x="640" y="1190" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">• Tie off rope if needed before continuing</text>
+  </g>
+  
+  <!-- Interactive Hotspots (new!) -->
+  <g id="hotspots">
+    <!-- Anchor Hotspot -->
+    <circle cx="500" cy="1550" r="15" fill="#3498db" fill-opacity="0.8" stroke="white" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="15;17;15" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="500" cy="1550" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">1</text>
+    
+    <!-- GriGri Orientation Hotspot -->
+    <circle cx="500" cy="1365" r="15" fill="#3498db" fill-opacity="0.8" stroke="white" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="15;17;15" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="500" cy="1365" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">2</text>
+    
+    <!-- First Pro Hotspot -->
+    <circle cx="522" cy="1290" r="15" fill="#3498db" fill-opacity="0.8" stroke="white" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="15;17;15" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="522" cy="1290" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">3</text>
+    
+    <!-- Backup Knot Hotspot -->
+    <circle cx="515" cy="1450" r="15" fill="#3498db" fill-opacity="0.8" stroke="white" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="15;17;15" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="515" cy="1450" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">4</text>
+  </g>
+</svg>

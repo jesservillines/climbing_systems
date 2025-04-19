@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <!-- Background -->
+  <rect width="100%" height="800" fill="#f0ece3" />
+  <rect y="800" width="100%" height="100" fill="#a67c52" />
+  
+  <!-- Climber Path - Dashed line -->
+  <path d="M400,150 L400,830" stroke="white" stroke-width="6" stroke-dasharray="10,10" stroke-linecap="round" />
+  
+  <!-- Rope lines and protection pieces -->
+  <!-- Green Load Strand -->
+  <path d="M400,830 C390,750 405,690 400,650 C395,610 385,580 400,550 C415,520 425,490 400,450 C375,410 365,390 385,345 C405,300 415,270 390,230 C375,200 370,170 400,150" stroke="#27ae60" stroke-width="12" fill="none" stroke-linecap="round" />
+  
+  <!-- Red Brake Strand -->
+  <path d="M400,520 C420,540 440,550 470,520 M470,520 C490,500 500,510 520,530" stroke="#e74c3c" stroke-width="8" fill="none" stroke-linecap="round" />
+  
+  <!-- Yellow Protection Pieces -->
+  <circle cx="400" cy="555" r="12" fill="#f1c40f" stroke="#f39c12" stroke-width="2" />
+  <circle cx="390" cy="480" r="12" fill="#f1c40f" stroke="#f39c12" stroke-width="2" />
+  <circle cx="385" cy="380" r="12" fill="#f1c40f" stroke="#f39c12" stroke-width="2" />
+  <circle cx="395" cy="300" r="12" fill="#f1c40f" stroke="#f39c12" stroke-width="2" />
+  
+  <!-- Climber Figures -->
+  <!-- Base figure -->
+  <g transform="translate(365, 520)">
+    <rect x="0" y="0" width="70" height="30" rx="15" ry="15" fill="#3498db" />
+    <circle cx="35" cy="-20" r="20" fill="#3498db" />
+    <rect x="25" y="-5" width="20" height="40" fill="#3498db" />
+    <line x1="25" y1="15" x2="10" y2="40" stroke="#3498db" stroke-width="10" stroke-linecap="round" />
+    <line x1="45" y1="15" x2="60" y2="40" stroke="#3498db" stroke-width="10" stroke-linecap="round" />
+  </g>
+  
+  <!-- GriGri Device -->
+  <g transform="translate(400, 505)">
+    <circle cx="0" cy="0" r="15" fill="#e67e22" stroke="#d35400" stroke-width="2" />
+    <path d="M-8,-8 L8,8 M-8,8 L8,-8" stroke="white" stroke-width="3" stroke-linecap="round" />
+  </g>
+  
+  <!-- Rope Bag -->
+  <g transform="translate(400, 590)">
+    <rect x="-25" y="-15" width="50" height="30" rx="5" ry="5" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" />
+    <path d="M-10,-15 L-10,-25 M10,-15 L10,-25" stroke="#7d3c98" stroke-width="2" />
+  </g>
+  
+  <!-- Anchors -->
+  <!-- Bottom Anchor -->
+  <g transform="translate(400, 830)">
+    <rect x="-50" y="-25" width="100" height="50" rx="5" ry="5" fill="#7f8c8d" stroke="#2c3e50" stroke-width="2" />
+    <text x="0" y="5" text-anchor="middle" fill="white" font-weight="bold" font-size="16">ANCHOR</text>
+  </g>
+  
+  <!-- Top Anchor -->
+  <g transform="translate(400, 150)">
+    <rect x="-50" y="-25" width="100" height="50" rx="5" ry="5" fill="#7f8c8d" stroke="#2c3e50" stroke-width="2" />
+    <text x="0" y="5" text-anchor="middle" fill="white" font-weight="bold" font-size="16">TOP ANCHOR</text>
+  </g>
+  
+  <!-- Information Boxes -->
+  <!-- Fall Management Box - moved right -->
+  <g transform="translate(650, 320)">
+    <rect x="-120" y="-75" width="240" height="150" rx="10" ry="10" fill="rgba(44, 62, 80, 0.9)" stroke="#2c3e50" stroke-width="2" />
+    <text x="0" y="-50" text-anchor="middle" fill="white" font-weight="bold" font-size="16">DURING A FALL</text>
+    <text x="-110" y="-20" fill="white">• GriGri will lock automatically</text>
+    <text x="-110" y="5" fill="white">• You'll fall twice the slack distance</text>
+    <text x="-110" y="30" fill="white">• Backup knots prevent catastrophic failure</text>
+    <text x="-110" y="55" fill="white">• Get hand on brake strand immediately</text>
+    <text x="-110" y="80" fill="white">• Tie off rope if needed before continuing</text>
+  </g>
+  
+  <!-- Multi-pitch Box - moved left -->
+  <g transform="translate(150, 320)">
+    <rect x="-120" y="-75" width="240" height="150" rx="10" ry="10" fill="rgba(44, 62, 80, 0.9)" stroke="#2c3e50" stroke-width="2" />
+    <text x="0" y="-50" text-anchor="middle" fill="white" font-weight="bold" font-size="16">MULTI-PITCH TRANSITION</text>
+    <text x="-110" y="-20" fill="white">1. Fix rope at top anchor (redundantly)</text>
+    <text x="-110" y="5" fill="white">2. Remove self-belay device, setup rappel</text>
+    <text x="-110" y="30" fill="white">3. Rappel while cleaning gear</text>
+    <text x="-110" y="55" fill="white">4. Setup ascenders, jumar back up</text>
+    <text x="-110" y="80" fill="white">5. Repeat for next pitch</text>
+  </g>
+  
+  <!-- Explanatory text with better background formatting -->
+  <g>
+    <!-- Chest harness info -->
+    <rect x="160" y="485" width="200" height="60" rx="5" ry="5" fill="rgba(255,255,255,0.8)" stroke="#bbb" stroke-width="1" />
+    <text x="170" y="505" fill="#444" font-size="12">Chest harness keeps</text>
+    <text x="170" y="522" fill="#444" font-size="12">GriGri properly oriented,</text>
+    <text x="170" y="539" fill="#444" font-size="12">flipped upside-down</text>
+  </g>
+  
+  <g>
+    <!-- Backup knot info -->
+    <rect x="160" y="580" width="200" height="45" rx="5" ry="5" fill="rgba(255,255,255,0.8)" stroke="#bbb" stroke-width="1" />
+    <text x="170" y="600" fill="#444" font-size="12">Runs from device's</text>
+    <text x="170" y="617" fill="#444" font-size="12">'brake side' to gear loop</text>
+  </g>
+  
+  <g>
+    <!-- Backup knots clipped info -->
+    <rect x="185" y="635" width="180" height="45" rx="5" ry="5" fill="rgba(255,255,255,0.8)" stroke="#bbb" stroke-width="1" />
+    <text x="195" y="655" fill="#444" font-size="12">Backup knots clipped</text>
+    <text x="195" y="672" fill="#444" font-size="12">to separate gear loops</text>
+  </g>
+  
+  <g>
+    <!-- Anchor info -->
+    <rect x="185" y="690" width="180" height="45" rx="5" ry="5" fill="rgba(255,255,255,0.8)" stroke="#bbb" stroke-width="1" />
+    <text x="195" y="710" fill="#444" font-size="12">Multi-directional anchor</text>
+    <text x="195" y="727" fill="#444" font-size="12">must hold upward pulls</text>
+  </g>
+  
+  <!-- START HERE label -->
+  <text x="400" y="870" text-anchor="middle" font-weight="bold" font-size="18" fill="white" style="filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.5));">START HERE</text>
+  
+  <!-- First Protection info -->
+  <rect x="420" y="510" width="140" height="55" rx="5" ry="5" fill="rgba(255,255,255,0.8)" stroke="#bbb" stroke-width="1" />
+  <text x="430" y="530" fill="#444" font-size="12">First piece reduces</text>
+  <text x="430" y="547" fill="#444" font-size="12">factor-2 fall danger</text>
+  <text x="430" y="564" fill="#444" font-size="12">("Jesus Piece")</text>
+  
+  <!-- Safety Warning Box - moved to side and made smaller -->
+  <g transform="translate(650, 650)">
+    <rect x="-120" y="-55" width="240" height="110" rx="5" ry="5" fill="rgba(231, 76, 60, 0.8)" stroke="#c0392b" stroke-width="2" />
+    <text x="0" y="-30" text-anchor="middle" fill="white" font-weight="bold" font-size="14">CRITICAL SAFETY WARNING</text>
+    <text x="-110" y="-5" fill="white" font-size="12">Device orientation is critical -</text>
+    <text x="-110" y="15" fill="white" font-size="12">incorrect setup WILL NOT catch a fall</text>
+    <text x="-110" y="35" fill="white" font-size="12">Always test near ground first.</text>
+  </g>
+  
+  <!-- Strand Labels -->
+  <rect x="450" y="620" width="180" height="50" rx="5" ry="5" fill="rgba(255,255,255,0.8)" stroke="#bbb" stroke-width="1" />
+  <text x="540" y="570" font-size="16" font-weight="bold" fill="#e74c3c">BRAKE STRAND</text>
+  <text x="460" y="640" fill="#444" font-size="12">Figure-8 or overhand on a bight</text>
+  <text x="460" y="658" fill="#444" font-size="12">every 5-10 meters on brake side</text>
+  
+  <!-- Up Arrow -->
+  <path d="M400,60 L400,100 M385,75 L400,60 L415,75" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
