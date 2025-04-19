@@ -88,6 +88,13 @@ export default function Shop() {
       image: "/merchandise/ChossConnoisseur.png",
       price: 24.99,
       description: "For those who appreciate the finer qualities of questionable rock. This premium embroidered cap is perfect for days when you're climbing on less-than-solid terrain."
+    },
+    {
+      id: 3,
+      name: "Dyno or Die Cap",
+      image: "/merchandise/DynoorDieHat.png",
+      price: 26.99,
+      description: "For the dynamic movement enthusiasts who see static climbing as just too boring. This premium hat celebrates your commitment to airtime and dynamic moves. Breathable fabric with an adjustable strap."
     }
   ];
 
