@@ -16,11 +16,17 @@ const AidClimbingDiagram = () => {
         <h3>Basic Aid Climbing Progression</h3>
         <div className="aid-diagram">
           <div className="diagram-image" style={{ textAlign: 'center' }}>
-            <img 
-              src="/images/aid-climbing-sequence.jpg" 
-              alt="Diagram showing the sequence of aid climbing movements" 
-              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
-            />
+            <div style={{ 
+              border: '1px dashed #ccc', 
+              padding: '2rem', 
+              borderRadius: '8px', 
+              backgroundColor: '#f5f5f5', 
+              marginBottom: '1rem',
+              textAlign: 'center'
+            }}>
+              <p><strong>Aid Climbing Sequence Diagram</strong></p>
+              <p>A step-by-step visual guide showing the progression of aid climbing techniques.</p>
+            </div>
             <p className="image-caption">
               Aid climbing progression showing the step-by-step sequence: 1) Place gear, 2) Test placement, 3) Weight gear and clip aider, 
               4) Step up as high as possible, 5) Place next piece, and 6) Progress upward.
@@ -52,7 +58,7 @@ const AidClimbingDiagram = () => {
         <div className="jumar-diagram">
           <div className="diagram-image" style={{ textAlign: 'center' }}>
             <img 
-              src="/images/jumar-cleaning-system.jpg" 
+              src="/images/jumar-cleaning-system.png" 
               alt="Diagram showing a climber using ascenders to clean a pitch" 
               style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
             />
@@ -83,11 +89,17 @@ const AidClimbingDiagram = () => {
         <h3>Hauling Systems</h3>
         <div className="hauling-diagram">
           <div className="diagram-image" style={{ textAlign: 'center' }}>
-            <img 
-              src="/images/hauling-system-diagram.jpg" 
-              alt="Diagram showing both 1:1 and 2:1 hauling systems" 
-              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
-            />
+            <div style={{ 
+              border: '1px dashed #ccc', 
+              padding: '2rem', 
+              borderRadius: '8px', 
+              backgroundColor: '#f5f5f5', 
+              marginBottom: '1rem',
+              textAlign: 'center'
+            }}>
+              <p><strong>Hauling System Diagram</strong></p>
+              <p>Comparison illustration of 1:1 direct hauling and 2:1 mechanical advantage systems.</p>
+            </div>
             <p className="image-caption">
               Comparison of 1:1 direct hauling (left) and 2:1 mechanical advantage hauling system (right) for lifting heavy loads up a big wall.
             </p>
