@@ -123,7 +123,7 @@ const AidClimbingDiagram = () => {
         <div className="portaledge-diagram">
           <div className="diagram-image" style={{ textAlign: 'center' }}>
             <img 
-              src="/images/portaledge-setup.jpg" 
+              src="/images/portaledge-setup.webp" 
               alt="Diagram showing proper portaledge setup and anchor configuration" 
               style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
             />

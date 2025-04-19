@@ -7,7 +7,7 @@ const Introduction = () => {
       
       <div className="image-container" style={{ marginBottom: '1.5rem' }}>
         <img 
-          src="/images/bigwall-aid-intro.jpg" 
+          src="/images/introduction-bigwall.jpg" 
           alt="A climber carefully inching up an aid pitch on a big wall in Yosemite." 
           className="full-width-image"
           style={{ maxHeight: '400px', objectFit: 'cover', borderRadius: '8px' }}
