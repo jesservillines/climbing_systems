@@ -13,17 +13,34 @@ export default function Home() {
 
       <nav className="navbar">
         <div className="logo-container">
-          <img src="/images/alpinisthub.png" alt="AlpinistHub Logo" className="site-logo" />
+          <Link href="/">
+            <img src="/images/alpinisthub.png" alt="AlpinistHub Logo" className="site-logo" />
+          </Link>
         </div>
         <ul>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" className="active">
+              <img src="/icons/mountain.png" alt="" className="nav-icon" width={20} height={20} />
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/rope-soloing">Rope Soloing</Link>
+            <Link href="/rope-soloing">
+              <img src="/icons/carabiner.png" alt="" className="nav-icon" width={20} height={20} />
+              Rope Soloing
+            </Link>
           </li>
           <li>
-            <Link href="/learn">Learn</Link>
+            <Link href="/learn">
+              <img src="/icons/helmet.png" alt="" className="nav-icon" width={20} height={20} />
+              Learn
+            </Link>
+          </li>
+          <li>
+            <Link href="/design-system">
+              <img src="/icons/image.png" alt="" className="nav-icon" width={20} height={20} />
+              Design
+            </Link>
           </li>
         </ul>
       </nav>
@@ -43,78 +60,94 @@ export default function Home() {
         
         {/* New Featured Section - Educational Resources */}
         <div className="new-feature-highlight" style={{ 
-          margin: '2rem 0', 
           padding: '1.5rem', 
-          backgroundColor: '#e3f2fd', 
-          borderRadius: '8px',
-          border: '2px solid #bbdefb',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '1rem'
+          backgroundColor: 'rgba(243, 156, 18, 0.1)', 
+          borderRadius: '5px',
+          marginBottom: '2rem',
+          border: '1px solid var(--primary-color)'
         }}>
-          <div style={{ flex: '3', minWidth: '300px' }}>
-            <h2 style={{ marginTop: 0, color: '#1565c0' }}>🆕 New Educational Resources Available!</h2>
-            <p style={{ fontSize: '1.1rem' }}>
-              Explore our new interactive learning tools, including a comprehensive climbing glossary, 
-              knowledge quizzes, and visual guides to avoid common mistakes.
-            </p>
-            <Link href="/learn" style={{ 
-              display: 'inline-block',
-              padding: '0.75rem 1.5rem',
-              backgroundColor: '#1565c0',
-              color: 'white',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              marginTop: '0.5rem'
-            }}>Explore Educational Resources</Link>
-          </div>
-          <div style={{ flex: '1', minWidth: '200px', textAlign: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start' }}>
             <div style={{ 
-              fontSize: '4rem', 
-              padding: '1rem',
-              borderRadius: '50%',
-              backgroundColor: 'white',
-              width: '100px',
-              height: '100px',
-              display: 'inline-flex',
+              backgroundColor: 'var(--primary-color)', 
+              color: 'black', 
+              padding: '0.2rem 0.5rem', 
+              borderRadius: '4px', 
+              fontSize: '0.8rem',
+              fontWeight: 'bold',
+              marginRight: '1rem',
+              marginTop: '0.2rem',
+              display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
-            }}>📚</div>
+              gap: '4px'
+            }}>
+              <img src="/icons/join_now.png" width={16} height={16} alt="" />
+              NEW
+            </div>
+            <div>
+              <h2 style={{ marginTop: 0 }}>New Educational Resources Available!</h2>
+              <p>
+                Explore our new interactive learning tools, including a comprehensive
+                climbing glossary, knowledge quizzes, and visual guides to avoid common
+                mistakes.
+              </p>
+              <Link href="/learn" className="btn">
+                <img src="/icons/helmet.png" width={20} height={20} alt="" style={{ marginRight: '8px' }} />
+                Explore Educational Resources
+              </Link>
+            </div>
           </div>
         </div>
 
-        <section className="grid">
+        <div className="grid">
           <div className="card">
-            <h2>Lead Rope Soloing</h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+              <img src="/icons/carabiner.png" alt="Carabiner icon" width={30} height={30} style={{ objectFit: 'contain' }} />
+              <h2 style={{ margin: 0 }}>Lead Rope Soloing</h2>
+            </div>
             <p>
               Learn about the practice of climbing and belaying yourself on lead,
               without a partner. Understand the systems, techniques, and safety considerations.
               Includes equipment guides and safety information.
             </p>
             <Link href="/rope-soloing" className="btn">
+              <img src="/icons/mountain_destination.png" alt="" width={20} height={20} style={{ marginRight: '8px' }} />
               Explore Techniques
             </Link>
           </div>
           
           <div className="card">
-            <h2>Educational Resources</h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+              <img src="/icons/helmet.png" alt="Helmet icon" width={30} height={30} style={{ objectFit: 'contain' }} />
+              <h2 style={{ margin: 0 }}>Educational Resources</h2>
+            </div>
             <p>
               Interactive learning tools including a climbing glossary, knowledge quizzes, 
               and visual guides to avoid common climbing mistakes.
             </p>
             <Link href="/learn" className="btn">
+              <img src="/icons/axe_comment.png" alt="" width={20} height={20} style={{ marginRight: '8px' }} />
               Start Learning
             </Link>
           </div>
-        </section>
+        </div>
       </main>
 
       <footer className="container" style={{ textAlign: 'center', marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
-        <p>&copy; {new Date().getFullYear()} Climbing Systems. All rights reserved.</p>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', gap: '1.5rem' }}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/icons/mountain.png" width={20} height={20} alt="Home" />
+            Home
+          </Link>
+          <Link href="/rope-soloing" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/icons/carabiner.png" width={20} height={20} alt="Rope Soloing" />
+            Rope Soloing
+          </Link>
+          <Link href="/learn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/icons/helmet.png" width={20} height={20} alt="Learn" />
+            Learn
+          </Link>
+        </div>
+        <p>&copy; {new Date().getFullYear()} AlpinistHub.com. All rights reserved.</p>
       </footer>
     </div>
   );

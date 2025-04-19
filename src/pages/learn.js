@@ -33,17 +33,34 @@ export default function Learn() {
 
       <nav className="navbar">
         <div className="logo-container">
-          <img src="/images/alpinisthub.png" alt="AlpinistHub Logo" className="site-logo" />
+          <Link href="/">
+            <img src="/images/alpinisthub.png" alt="AlpinistHub Logo" className="site-logo" />
+          </Link>
         </div>
         <ul>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">
+              <img src="/icons/mountain.png" alt="" className="nav-icon" width={20} height={20} />
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/rope-soloing">Rope Soloing</Link>
+            <Link href="/rope-soloing">
+              <img src="/icons/carabiner.png" alt="" className="nav-icon" width={20} height={20} />
+              Rope Soloing
+            </Link>
           </li>
           <li>
-            <Link href="/learn">Learn</Link>
+            <Link href="/learn" className="active">
+              <img src="/icons/helmet.png" alt="" className="nav-icon" width={20} height={20} />
+              Learn
+            </Link>
+          </li>
+          <li>
+            <Link href="/design-system">
+              <img src="/icons/image.png" alt="" className="nav-icon" width={20} height={20} />
+              Design
+            </Link>
           </li>
         </ul>
       </nav>
@@ -59,8 +76,9 @@ export default function Learn() {
                   href="#glossary" 
                   onClick={(e) => { e.preventDefault(); scrollToSection('glossary'); }}
                   className={activeSection === 'glossary' ? 'active' : ''}
-                  style={{ display: 'block', padding: '0.5rem 0', color: activeSection === 'glossary' ? 'var(--primary-color)' : 'inherit' }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 0', color: activeSection === 'glossary' ? 'var(--primary-color)' : 'inherit' }}
                 >
+                  <img src="/icons/mountain.png" width={18} height={18} alt="" />
                   Climbing Glossary
                 </a>
               </li>
@@ -69,8 +87,9 @@ export default function Learn() {
                   href="#common-mistakes" 
                   onClick={(e) => { e.preventDefault(); scrollToSection('common-mistakes'); }}
                   className={activeSection === 'common-mistakes' ? 'active' : ''}
-                  style={{ display: 'block', padding: '0.5rem 0', color: activeSection === 'common-mistakes' ? 'var(--primary-color)' : 'inherit' }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 0', color: activeSection === 'common-mistakes' ? 'var(--primary-color)' : 'inherit' }}
                 >
+                  <img src="/icons/helmet.png" width={18} height={18} alt="" />
                   Common Mistakes Guide
                 </a>
               </li>
@@ -79,8 +98,9 @@ export default function Learn() {
                   href="#knowledge-quiz" 
                   onClick={(e) => { e.preventDefault(); scrollToSection('knowledge-quiz'); }}
                   className={activeSection === 'knowledge-quiz' ? 'active' : ''}
-                  style={{ display: 'block', padding: '0.5rem 0', color: activeSection === 'knowledge-quiz' ? 'var(--primary-color)' : 'inherit' }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 0', color: activeSection === 'knowledge-quiz' ? 'var(--primary-color)' : 'inherit' }}
                 >
+                  <img src="/icons/axe_comment.png" width={18} height={18} alt="" />
                   Knowledge Quiz
                 </a>
               </li>
@@ -102,19 +122,25 @@ export default function Learn() {
 
         {/* Main Content */}
         <main style={{ flex: 1, marginTop: '2rem' }}>
-          <h1>Educational Resources</h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
+            <img src="/icons/helmet.png" alt="Educational icon" width={40} height={40} style={{ objectFit: 'contain' }} />
+            <h1 style={{ margin: 0 }}>Educational Resources</h1>
+          </div>
           <p className="lead" style={{ fontSize: '1.1rem', fontWeight: 'normal', marginBottom: '1rem' }}>
             Comprehensive educational resources to enhance your understanding of climbing systems and techniques.
             Use these tools to expand your knowledge, test your understanding, and learn to avoid common mistakes.
           </p>
           
-          <div className="alert alert-info">
-            <h4>Learning Resources</h4>
-            <p>
-              These educational tools are designed to supplement hands-on training, not replace it. 
-              Always seek proper instruction from qualified professionals before implementing any techniques
-              described in this application.
-            </p>
+          <div className="alert alert-info" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <img src="/icons/axe_comment.png" width={30} height={30} alt="Information" style={{ marginTop: '0.25rem' }} />
+            <div>
+              <h4>Learning Resources</h4>
+              <p>
+                These educational tools are designed to supplement hands-on training, not replace it. 
+                Always seek proper instruction from qualified professionals before implementing any techniques
+                described in this application.
+              </p>
+            </div>
           </div>
 
           {/* Climbing Glossary Section */}
@@ -139,6 +165,20 @@ export default function Learn() {
       </div>
 
       <footer className="container" style={{ textAlign: 'center', marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', gap: '1.5rem' }}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/icons/mountain.png" width={20} height={20} alt="Home" />
+            Home
+          </Link>
+          <Link href="/rope-soloing" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/icons/carabiner.png" width={20} height={20} alt="Rope Soloing" />
+            Rope Soloing
+          </Link>
+          <Link href="/learn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/icons/helmet.png" width={20} height={20} alt="Learn" />
+            Learn
+          </Link>
+        </div>
         <p>&copy; {new Date().getFullYear()} AlpinistHub.com. All rights reserved.</p>
       </footer>
 
