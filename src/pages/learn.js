@@ -45,6 +45,12 @@ export default function Learn() {
             </Link>
           </li>
           <li>
+            <Link href="/big-wall-aid">
+              <img src="/icons/mountain_destination.png" alt="" className="nav-icon" width={20} height={20} />
+              Big Wall & Aid
+            </Link>
+          </li>
+          <li>
             <Link href="/rope-soloing">
               <img src="/icons/carabiner.png" alt="" className="nav-icon" width={20} height={20} />
               Rope Soloing
@@ -170,6 +176,10 @@ export default function Learn() {
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img src="/icons/mountain.png" width={20} height={20} alt="Home" />
             Home
+          </Link>
+          <Link href="/big-wall-aid" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/icons/mountain_destination.png" width={20} height={20} alt="Big Wall & Aid" />
+            Big Wall & Aid
           </Link>
           <Link href="/rope-soloing" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img src="/icons/carabiner.png" width={20} height={20} alt="Rope Soloing" />

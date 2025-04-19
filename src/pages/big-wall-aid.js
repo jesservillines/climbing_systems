@@ -5,24 +5,20 @@ import KnowledgeLevelToggle from '../components/shared/KnowledgeLevelToggle';
 import TabNavigator from '../components/shared/TabNavigator';
 
 // Import components
-import Introduction from '../components/rope-soloing/Introduction';
-import EssentialGear from '../components/rope-soloing/EssentialGear';
-import SinglePitch from '../components/rope-soloing/SinglePitch';
-import MultiPitch from '../components/rope-soloing/MultiPitch';
-import AlpineSoloing from '../components/rope-soloing/AlpineSoloing';
-import DeviceComparison from '../components/rope-soloing/DeviceComparison';
-import SafetyRisks from '../components/rope-soloing/SafetyRisks';
-import ExpertInsights from '../components/rope-soloing/ExpertInsights';
-import LeadRopeSoloDiagram from '../components/rope-soloing/LeadRopeSoloDiagram';
-import GriGriSetupGuide from '../components/rope-soloing/GriGriSetupGuide';
+import Introduction from '../components/big-wall-aid/Introduction';
+import EssentialGear from '../components/big-wall-aid/EssentialGear';
+import CleanAid from '../components/big-wall-aid/CleanAid';
+import NailingTechniques from '../components/big-wall-aid/NailingTechniques';
+import Hauling from '../components/big-wall-aid/Hauling';
+import BigWallTechniques from '../components/big-wall-aid/BigWallTechniques';
+import SafetyRisks from '../components/big-wall-aid/SafetyRisks';
+import ExpertInsights from '../components/big-wall-aid/ExpertInsights';
+import HistoryMilestones from '../components/big-wall-aid/HistoryMilestones';
+import PortaledgeLiving from '../components/big-wall-aid/PortaledgeLiving';
+import ModernInnovations from '../components/big-wall-aid/ModernInnovations';
+import AidClimbingDiagram from '../components/big-wall-aid/AidClimbingDiagram';
 
-// Import new enhanced components
-import SystemSetupWizard from '../components/rope-soloing/SystemSetupWizard';
-import TroubleshootingGuide from '../components/rope-soloing/TroubleshootingGuide';
-import VideoTutorials from '../components/rope-soloing/VideoTutorials';
-import CaseStudies from '../components/rope-soloing/CaseStudies';
-
-export default function RopeSoloing() {
+export default function BigWallAid() {
   const [knowledgeLevel, setKnowledgeLevel] = useState('intermediate');
   
   // Store knowledge level preference in localStorage
@@ -48,7 +44,7 @@ export default function RopeSoloing() {
         content: (
           <div>
             <Introduction />
-            <LeadRopeSoloDiagram />
+            <AidClimbingDiagram />
           </div>
         )
       },
@@ -58,65 +54,53 @@ export default function RopeSoloing() {
         content: <EssentialGear />
       },
       {
-        id: 'setup',
-        label: 'Setup Guide',
-        content: <GriGriSetupGuide knowledgeLevel={knowledgeLevel} />
+        id: 'history',
+        label: 'History & Milestones',
+        content: <HistoryMilestones />
       },
       {
-        id: 'device-comparison',
-        label: 'Device Comparison',
-        content: <DeviceComparison />
+        id: 'innovations',
+        label: 'Modern Innovations',
+        content: <ModernInnovations />
       }
     ],
     'techniques': [
       {
-        id: 'single-pitch',
-        label: 'Single Pitch',
-        content: <SinglePitch />
+        id: 'big-wall',
+        label: 'Big Wall Techniques',
+        content: <BigWallTechniques />
       },
       {
-        id: 'multi-pitch',
-        label: 'Multi-Pitch',
-        content: <MultiPitch />
+        id: 'clean-aid',
+        label: 'Clean Aid',
+        content: <CleanAid />
       },
       {
-        id: 'alpine',
-        label: 'Alpine Soloing',
-        content: <AlpineSoloing />
+        id: 'nailing',
+        label: 'Nailing Techniques',
+        content: <NailingTechniques />
+      },
+      {
+        id: 'hauling',
+        label: 'Hauling & Logistics',
+        content: <Hauling />
       }
     ],
-    'safety': [
+    'living': [
       {
-        id: 'risks',
-        label: 'Safety Risks',
+        id: 'portaledge',
+        label: 'Portaledge Living',
+        content: <PortaledgeLiving />
+      },
+      {
+        id: 'safety',
+        label: 'Safety Considerations',
         content: <SafetyRisks />
       },
       {
         id: 'expert-insights',
         label: 'Expert Insights',
         content: <ExpertInsights />
-      },
-      {
-        id: 'troubleshooting',
-        label: 'Troubleshooting',
-        content: <TroubleshootingGuide />
-      }
-    ],
-    'learning': [
-      {
-        id: 'setup-wizard',
-        label: 'Interactive Setup Wizard',
-        content: <SystemSetupWizard />
-      },
-      {
-        id: 'videos',
-        label: 'Video Tutorials',
-        content: <VideoTutorials />
-      },
-      {
-        id: 'case-studies',
-        label: 'Real-World Examples',
-        content: <CaseStudies />
       }
     ]
   };
@@ -124,8 +108,8 @@ export default function RopeSoloing() {
   return (
     <div>
       <Head>
-        <title>Lead Rope Soloing | AlpinistHub</title>
-        <meta name="description" content="Comprehensive guide to lead rope soloing systems, techniques, and safety" />
+        <title>Big Wall & Aid Climbing | AlpinistHub</title>
+        <meta name="description" content="Comprehensive guide to big wall and aid climbing techniques, gear, and best practices" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -137,19 +121,13 @@ export default function RopeSoloing() {
         </div>
         <ul className="nav-links">
           <li>
-            <Link href="/">
-              <img src="/icons/mountain.png" alt="" className="nav-icon" width={20} height={20} />
-              Home
-            </Link>
-          </li>
-          <li>
             <Link href="/big-wall-aid">
               <img src="/icons/mountain_destination.png" alt="" className="nav-icon" width={20} height={20} />
               Big Wall & Aid
             </Link>
           </li>
           <li>
-            <Link href="/rope-soloing" className="active">
+            <Link href="/rope-soloing">
               <img src="/icons/carabiner.png" alt="" className="nav-icon" width={20} height={20} />
               Rope Soloing
             </Link>
@@ -166,20 +144,19 @@ export default function RopeSoloing() {
               Shop
             </Link>
           </li>
-
         </ul>
       </nav>
 
       <div className="container" style={{ marginTop: '2rem' }}>
         <div className="page-header" style={{ marginBottom: '2rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-            <img src="/icons/carabiner.png" alt="Carabiner icon" width={40} height={40} style={{ objectFit: 'contain' }} />
-            <h1 style={{ margin: 0 }}>Lead Rope Soloing: Systems, Techniques, and Safety Guide</h1>
+            <img src="/icons/mountain_destination.png" alt="Big wall icon" width={40} height={40} style={{ objectFit: 'contain' }} />
+            <h1 style={{ margin: 0 }}>Big Wall and Aid Climbing: Techniques, Gear, and Best Practices</h1>
           </div>
           <p className="lead" style={{ fontSize: '1.1rem', fontWeight: 'normal', marginBottom: '1.5rem' }}>
-            A comprehensive resource on lead rope soloing - climbing and belaying yourself on lead without a partner.
-            This guide covers essential techniques, systems for different climbing scenarios, equipment comparisons, 
-            and crucial safety considerations.
+            A comprehensive guide to the vertical world of big wall and aid climbing. Learn essential techniques, 
+            specialized gear requirements, historical context, and safety considerations for tackling multi-day 
+            ascents on the world's largest rock faces.
           </p>
           
           <div className="knowledge-level-container" style={{ 
@@ -196,11 +173,11 @@ export default function RopeSoloing() {
           <div className="alert alert-warning" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
             <img src="/icons/helmet.png" width={30} height={30} alt="Safety warning" style={{ marginTop: '0.25rem' }} />
             <div>
-              <h4>Warning: Advanced Technique</h4>
+              <h4>Warning: Advanced Climbing Techniques</h4>
               <p>
-                Lead rope soloing is an advanced climbing technique that carries inherent risks. The information 
-                provided here is for educational purposes only. Always seek proper training from qualified 
-                instructors before attempting to rope solo.
+                Big wall and aid climbing require specialized knowledge, skills, and extensive gear management.
+                The information provided here is for educational purposes only. Always seek proper training from 
+                qualified instructors before attempting these advanced climbing techniques.
               </p>
             </div>
           </div>
