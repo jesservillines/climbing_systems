@@ -45,7 +45,33 @@ export default function Home() {
         </ul>
       </nav>
 
-      <main className="container">
+      <main className="container" style={{ position: 'relative' }}>
+        {/* Large transparent background logo */}
+        <div style={{ 
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '80%',
+          height: '80%',
+          opacity: '0.05',
+          zIndex: '-1',
+          pointerEvents: 'none',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <img 
+            src="/images/alpinisthub.png" 
+            alt="" 
+            style={{ 
+              maxWidth: '100%',
+              maxHeight: '100%',
+              objectFit: 'contain'
+            }} 
+          />
+        </div>
+        
         <header className="hero">
           <h1>Welcome to AlpinistHub</h1>
           <p>
