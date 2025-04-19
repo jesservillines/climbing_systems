@@ -126,6 +126,60 @@ p {
   opacity: 0.8;
 }
 
+/* Special styling for shop button to make it irresistible */
+.btn-shop {
+  background: linear-gradient(135deg, var(--primary-color), #2980b9);
+  padding: 0.7rem 1.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+.btn-shop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(-25deg);
+  transition: all 0.75s ease;
+}
+
+.btn-shop:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(255, 255, 255, 0.2) inset;
+  animation: none;
+  opacity: 1;
+}
+
+.btn-shop:hover::before {
+  left: 150%;
+}
+
+.btn-shop:active {
+  transform: scale(0.98) translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(255, 255, 255, 0.15) inset;
+  }
+  100% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  }
+}
+
 .card {
   border: 1px solid #ddd;
   border-radius: 5px;

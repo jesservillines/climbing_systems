@@ -121,7 +121,7 @@ export default function Home() {
                 From "Beta Spray" to "Send Train", express your climbing identity with our high-quality, 
                 weather-resistant designs.
               </p>
-              <Link href="/shop" className="btn">
+              <Link href="/shop" className="btn btn-shop">
                 <span className="btn-icon-wrapper">
                   <img src="/icons/shop.png" alt="" className="btn-icon" />
                 </span>
