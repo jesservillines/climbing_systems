@@ -5,14 +5,7 @@ const AidClimbingDiagram = () => {
     <div className="section">
       <h2>Aid Climbing Systems and Techniques Visualization</h2>
       
-      <div className="diagram-container" style={{ 
-        border: '1px solid var(--border-color)',
-        borderRadius: '8px',
-        padding: '1.5rem',
-        marginTop: '1rem',
-        marginBottom: '2rem',
-        backgroundColor: 'rgba(var(--light-bg-color-rgb), 0.3)'
-      }}>
+      <div className="diagram-container">
         <h3>Basic Aid Climbing Progression</h3>
         <div className="aid-diagram">
           <div className="diagram-image" style={{ textAlign: 'center' }}>
@@ -47,20 +40,14 @@ const AidClimbingDiagram = () => {
         </div>
       </div>
       
-      <div className="diagram-container" style={{ 
-        border: '1px solid var(--border-color)',
-        borderRadius: '8px',
-        padding: '1.5rem',
-        marginBottom: '2rem',
-        backgroundColor: 'rgba(var(--light-bg-color-rgb), 0.3)'
-      }}>
+      <div className="diagram-container">
         <h3>The Second's System: Jumaring and Cleaning</h3>
         <div className="jumar-diagram">
           <div className="diagram-image" style={{ textAlign: 'center' }}>
             <img 
               src="/images/jumar-cleaning-system.png" 
               alt="Diagram showing a climber using ascenders to clean a pitch" 
-              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
+              className="diagram-image-full"
             />
             <p className="image-caption">
               The second climber's setup showing the dual ascender system with proper backup. The climber ascends the fixed rope while removing protection.
@@ -79,13 +66,7 @@ const AidClimbingDiagram = () => {
         </div>
       </div>
       
-      <div className="diagram-container" style={{ 
-        border: '1px solid var(--border-color)',
-        borderRadius: '8px',
-        padding: '1.5rem',
-        marginBottom: '2rem',
-        backgroundColor: 'rgba(var(--light-bg-color-rgb), 0.3)'
-      }}>
+      <div className="diagram-container">
         <h3>Hauling Systems</h3>
         <div className="hauling-diagram">
           <div className="diagram-image" style={{ textAlign: 'center' }}>
@@ -125,19 +106,14 @@ const AidClimbingDiagram = () => {
         </div>
       </div>
       
-      <div className="diagram-container" style={{ 
-        border: '1px solid var(--border-color)',
-        borderRadius: '8px',
-        padding: '1.5rem',
-        backgroundColor: 'rgba(var(--light-bg-color-rgb), 0.3)'
-      }}>
+      <div className="diagram-container">
         <h3>Portaledge Setup</h3>
         <div className="portaledge-diagram">
           <div className="diagram-image" style={{ textAlign: 'center' }}>
             <img 
               src="/images/portaledge-setup.webp" 
               alt="Diagram showing proper portaledge setup and anchor configuration" 
-              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
+              className="diagram-image-full"
             />
             <p className="image-caption">
               Proper portaledge deployment showing main suspension point, frame assembly, and fly configuration for weather protection.

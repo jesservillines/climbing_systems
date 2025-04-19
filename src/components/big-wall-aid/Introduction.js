@@ -5,12 +5,11 @@ const Introduction = () => {
     <div className="section">
       <h2>Overview of Big Wall and Aid Climbing</h2>
       
-      <div className="image-container" style={{ marginBottom: '1.5rem' }}>
+      <div className="image-container">
         <img 
           src="/images/introduction-bigwall.png" 
           alt="A climber carefully inching up an aid pitch on a big wall in Yosemite." 
           className="full-width-image"
-          style={{ maxHeight: '400px', objectFit: 'cover', borderRadius: '8px' }}
         />
         <p className="image-caption">
           A climber carefully inching up an aid pitch on a big wall in Yosemite. Big wall routes often involve steep, sustained aid climbing with complex gear systems.
@@ -25,14 +24,21 @@ const Introduction = () => {
       </p>
 
       <h3>Aid Climbing vs. Free Climbing</h3>
-      <p>
-        On big walls, climbers often resort to aid climbing techniques to make upward progress. Aid climbing means using gear placed in the rock to stand on or pull on (via ladders called aiders or etriers) 
-        rather than just hands and feet on rock holds. This allows ascending sections of blank or extremely difficult rock that cannot be free-climbed.
-      </p>
-      <p>
-        In the past, big walls were done almost entirely with aid (sometimes involving siege tactics with hundreds of pitons). Modern ethics encourage using aid sparingly – many big wall routes have since been 
-        free-climbed by elite climbers, but aid techniques remain essential for most parties tackling these immense climbs.
-      </p>
+      <div className="image-container">
+        <img 
+          src="/images/portaledge-setup.webp" 
+          alt="An aid climber on a big wall route using specialized techniques" 
+          className="image-float-right"
+        />
+        <p>
+          On big walls, climbers often resort to aid climbing techniques to make upward progress. Aid climbing means using gear placed in the rock to stand on or pull on (via ladders called aiders or etriers) 
+          rather than just hands and feet on rock holds. This allows ascending sections of blank or extremely difficult rock that cannot be free-climbed.
+        </p>
+        <p>
+          In the past, big walls were done almost entirely with aid (sometimes involving siege tactics with hundreds of pitons). Modern ethics encourage using aid sparingly – many big wall routes have since been 
+          free-climbed by elite climbers, but aid techniques remain essential for most parties tackling these immense climbs.
+        </p>
+      </div>
 
       <h3>The Big Wall Environment</h3>
       <p>

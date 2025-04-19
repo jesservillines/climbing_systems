@@ -161,7 +161,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -176,14 +176,19 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  height: 38px;
+  overflow: hidden;
 }
 
 .site-logo {
-  height: 100px;
+  height: 70px;
   width: auto;
   margin-right: 0.5rem;
   object-fit: contain;
   vertical-align: middle;
+  position: relative;
+  top: 2px;
 }
 
 .navbar ul {
@@ -197,6 +202,7 @@ p {
 .navbar ul li {
   margin-left: 1.5rem;
   position: relative;
+  line-height: 1.2;
 }
 
 .navbar a {
@@ -594,6 +600,78 @@ p {
 .mobile-nav .nav-icon {
   width: 24px;
   height: 24px;
+}
+
+/* Image Layouts */
+.image-container {
+  margin: 1.5rem 0;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.image-float-right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  max-width: 40%;
+}
+
+.image-float-left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  max-width: 40%;
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.full-width-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.diagram-container {
+  margin: 2rem 0;
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: rgba(var(--light-bg-color-rgb), 0.15);
+}
+
+.diagram-image {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.diagram-image-full {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.diagram-explanation {
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .image-float-right,
+  .image-float-left {
+    float: none;
+    margin: 1rem 0;
+    max-width: 100%;
+  }
 }
 
 /* Responsive design */
