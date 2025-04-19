@@ -212,7 +212,7 @@ export default function Shop() {
           </li>
           <li>
             <Link href="/big-wall-aid">
-              <img src="/icons/mountain_destination.png" alt="" className="nav-icon" width={20} height={20} />
+              <img src="/icons/shop.png" alt="" className="nav-icon" width={20} height={20} />
               Big Wall & Aid
             </Link>
           </li>
@@ -224,20 +224,20 @@ export default function Shop() {
           </li>
           <li>
             <Link href="/learn">
-              <img src="/icons/helmet.png" alt="" className="nav-icon" />
+              <img src="/icons/helmet.png" alt="" className="nav-icon" width={20} height={20} />
               Learn
             </Link>
           </li>
           <li>
-            <Link href="/shop" className="active">
+            <Link href="/shop">
               <img src="/icons/shop.png" alt="" className="nav-icon" width={20} height={20} />
               Shop
             </Link>
           </li>
         </ul>
-        
-        {/* Mobile Hamburger Menu */}
-        <HamburgerMenu navItems={navItems} />
+        <div className="mobile-only">
+          <HamburgerMenu navItems={navItems} />
+        </div>
       </nav>
 
       <main className="container">
@@ -460,7 +460,7 @@ export default function Shop() {
             Home
           </Link>
           <Link href="/big-wall-aid" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <img src="/icons/mountain_destination.png" width={20} height={20} alt="Big Wall & Aid" />
+            <img src="/icons/shop.png" width={20} height={20} alt="Big Wall & Aid" />
             Big Wall & Aid
           </Link>
           <Link href="/rope-soloing" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

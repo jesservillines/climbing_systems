@@ -7,7 +7,7 @@ export default function Home() {
   // Define navigation items for both desktop and mobile menus
   const navItems = [
     { href: '/', label: 'Home', icon: '/icons/mountain.png' },
-    { href: '/big-wall-aid', label: 'Big Wall & Aid', icon: '/icons/mountain_destination.png' },
+    { href: '/big-wall-aid', label: 'Big Wall & Aid', icon: '/icons/shop.png' },
     { href: '/rope-soloing', label: 'Rope Soloing', icon: '/icons/carabiner.png' },
     { href: '/learn', label: 'Learn', icon: '/icons/helmet.png' },
     { href: '/shop', label: 'Shop', icon: '/icons/shop.png' },
@@ -36,7 +36,7 @@ export default function Home() {
           </li>
           <li>
             <Link href="/big-wall-aid">
-              <img src="/icons/mountain_destination.png" alt="" className="nav-icon" width={20} height={20} />
+              <img src="/icons/shop.png" alt="" className="nav-icon" width={20} height={20} />
               Big Wall & Aid
             </Link>
           </li>
@@ -108,7 +108,7 @@ export default function Home() {
         {/* Shop Promotion Section */}
         <div className="new-feature-highlight" style={{ 
           padding: '1.5rem', 
-          backgroundColor: 'rgba(243, 156, 18, 0.1)', 
+          backgroundColor: 'rgba(28, 110, 164, 0.1)', 
           borderRadius: '5px',
           marginBottom: '2rem',
           border: '1px solid var(--primary-color)'
@@ -152,7 +152,7 @@ export default function Home() {
 
           <div className="card">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <img src="/icons/mountain_destination.png" alt="Big Wall & Aid icon" width={30} height={30} style={{ objectFit: 'contain' }} />
+              <img src="/icons/shop.png" alt="Big Wall & Aid icon" width={30} height={30} style={{ objectFit: 'contain' }} />
               <h2 style={{ margin: 0 }}>Big Wall & Aid Climbing</h2>
             </div>
             <p>
@@ -160,7 +160,7 @@ export default function Home() {
             </p>
             <Link href="/big-wall-aid" className="btn">
               <span className="btn-icon-wrapper">
-                <img src="/icons/mountain_destination.png" alt="" className="btn-icon" />
+                <img src="/icons/shop.png" alt="" className="btn-icon" />
               </span>
               Explore Big Wall & Aid
             </Link>
@@ -192,7 +192,7 @@ export default function Home() {
             Home
           </Link>
           <Link href="/big-wall-aid" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <img src="/icons/mountain_destination.png" width={20} height={20} alt="Big Wall & Aid" />
+            <img src="/icons/shop.png" width={20} height={20} alt="Big Wall & Aid" />
             Big Wall & Aid
           </Link>
           <Link href="/rope-soloing" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -204,7 +204,7 @@ export default function Home() {
             Learn
           </Link>
           <Link href="/shop" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <img src="/icons/mountain_destination.png" width={20} height={20} alt="Shop" />
+            <img src="/icons/shop.png" width={20} height={20} alt="Shop" />
             Shop
           </Link>
         </div>
