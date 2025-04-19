@@ -155,11 +155,12 @@ export default function RopeSoloing() {
             </Link>
           </li>
           <li>
-            <Link href="/design-system">
-              <img src="/icons/image.png" alt="" className="nav-icon" width={20} height={20} />
-              Design
+            <Link href="/shop">
+              <img src="/icons/mountain_destination.png" alt="" className="nav-icon" width={20} height={20} />
+              Shop
             </Link>
           </li>
+
         </ul>
       </nav>
 
@@ -220,6 +221,10 @@ export default function RopeSoloing() {
           <Link href="/learn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img src="/icons/helmet.png" width={20} height={20} alt="Learn" />
             Learn
+          </Link>
+          <Link href="/shop" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/icons/mountain_destination.png" width={20} height={20} alt="Shop" />
+            Shop
           </Link>
         </div>
         <p>&copy; {new Date().getFullYear()} AlpinistHub.com. All rights reserved.</p>
