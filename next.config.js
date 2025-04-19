@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // This setting ensures compatibility with Netlify's serverless functions
-  target: process.env.NETLIFY ? 'serverless' : undefined,
+  // Optimized for Netlify deployment
+  output: 'standalone',
 }
 
 module.exports = nextConfig

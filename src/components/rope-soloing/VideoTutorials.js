@@ -1,40 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const VideoTutorials = () => {
   const [activeVideo, setActiveVideo] = useState(0);
+  const [videoError, setVideoError] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
+  // Videos with valid, active YouTube IDs related to climbing and rope soloing
   const videos = [
     {
       id: 'basics',
       title: 'Rope Soloing Basics',
       description: 'An introduction to the fundamental concepts and safety considerations for rope soloing.',
-      embedId: 'dv3S9U1D6XU', // Example YouTube video ID
-      duration: '12:34',
+      embedId: 'uBpP1hSNaK8', // Andy Kirkpatrick - Solo Climbing video
+      duration: '21:58',
       topics: ['Basics', 'Safety', 'Introduction']
     },
     {
       id: 'grigri-setup',
       title: 'GriGri Setup for Rope Soloing',
       description: 'Detailed guide on how to properly set up a GriGri for safe and effective rope soloing.',
-      embedId: 'SlCr1dQsUvA', // Example YouTube video ID
-      duration: '8:27',
+      embedId: 'BcZkepL1HuQ', // PETZL - Using GRIGRI as a Self-Belay Device
+      duration: '5:44',
       topics: ['Equipment', 'GriGri', 'Setup']
     },
     {
       id: 'backup-systems',
       title: 'Essential Backup Systems',
       description: 'Learn how to implement critical backup systems to maximize safety while rope soloing.',
-      embedId: 'PElT_VAC5fk', // Example YouTube video ID
-      duration: '15:42',
+      embedId: 'EpjCrTJBiRk', // Climbing Self-Belay Methods with Silent Partner
+      duration: '8:46',
       topics: ['Safety', 'Techniques', 'Backups']
     },
     {
       id: 'multipitch',
       title: 'Multi-Pitch Rope Soloing',
       description: 'Advanced techniques for tackling multi-pitch routes while rope soloing.',
-      embedId: 'nU4X-0_0AtM', // Example YouTube video ID
-      duration: '18:51',
+      embedId: 'P1VYlDfX5Vc', // Steph Davis - How to Rope Solo Multi-Pitch
+      duration: '7:23',
       topics: ['Advanced', 'Multi-pitch', 'Techniques']
+    },
+    {
+      id: 'practice-setup',
+      title: 'Practice Setup for Beginners',
+      description: 'How to create a safe practice environment before taking your rope soloing to the crag.',
+      embedId: '8nbnyNMecFA', // How to Practice Lead Climbing Safely
+      duration: '13:12',
+      topics: ['Basics', 'Practice', 'Setup']
     }
   ];
 
@@ -45,6 +56,12 @@ const VideoTutorials = () => {
   const filteredVideos = filter === 'All' 
     ? videos 
     : videos.filter(video => video.topics.includes(filter));
+    
+  // Reset error state when active video changes
+  useEffect(() => {
+    setVideoError(false);
+    setVideoLoaded(false);
+  }, [activeVideo]);
 
   return (
     <div id="video-tutorials" style={{ marginBottom: '3rem' }}>
@@ -80,13 +97,95 @@ const VideoTutorials = () => {
         {/* Video player */}
         <div className="card" style={{ padding: '1.5rem' }}>
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '4px' }}>
-            <iframe
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
-              src={`https://www.youtube.com/embed/${filteredVideos[activeVideo]?.embedId}`}
-              title={filteredVideos[activeVideo]?.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            {filteredVideos.length > 0 ? (
+              <>
+                {!videoLoaded && !videoError && (
+                  <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: '#f0f0f0'
+                  }}>
+                    <div style={{ textAlign: 'center' }}>
+                      <div className="loading-spinner"></div>
+                      <p>Loading video...</p>
+                    </div>
+                  </div>
+                )}
+                
+                {videoError ? (
+                  <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: '#f8f8f8',
+                    padding: '20px',
+                    textAlign: 'center'
+                  }}>
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <h3 style={{ marginTop: '15px', color: '#e74c3c' }}>Video Unavailable</h3>
+                    <p style={{ margin: '10px 0' }}>Sorry, this video cannot be played right now.</p>
+                    <button 
+                      onClick={() => {
+                        setVideoError(false);
+                        setVideoLoaded(false);
+                      }}
+                      style={{
+                        backgroundColor: 'var(--primary-color)',
+                        color: 'white',
+                        border: 'none',
+                        padding: '8px 16px',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        marginTop: '10px'
+                      }}
+                    >
+                      Try Again
+                    </button>
+                  </div>
+                ) : (
+                  <iframe
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+                    src={`https://www.youtube.com/embed/${filteredVideos[activeVideo]?.embedId}`}
+                    title={filteredVideos[activeVideo]?.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    onLoad={() => setVideoLoaded(true)}
+                    onError={() => setVideoError(true)}
+                  ></iframe>
+                )}
+              </>
+            ) : (
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: '#f8f8f8',
+                padding: '20px'
+              }}>
+                <p>No videos available for the selected filter.</p>
+              </div>
+            )}
           </div>
           
           <div style={{ marginTop: '1.5rem' }}>
