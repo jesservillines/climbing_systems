@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import KnowledgeLevelToggle from '../components/shared/KnowledgeLevelToggle';
 import TabNavigator from '../components/shared/TabNavigator';
 import HamburgerMenu from '../components/shared/HamburgerMenu';
+import StructuredData from '../components/shared/StructuredData';
 
 // Import components
 import Introduction from '../components/big-wall-aid/Introduction';
@@ -118,9 +119,48 @@ export default function BigWallAid() {
   return (
     <div>
       <Head>
-        <title>Big Wall & Aid Climbing | AlpinistHub</title>
-        <meta name="description" content="Comprehensive guide to big wall and aid climbing techniques, gear, and best practices" />
+        <title>Big Wall & Aid Climbing Techniques & Gear Guide | AlpinistHub</title>
+        <meta name="description" content="Master big wall and aid climbing with our comprehensive guide covering techniques, essential gear, hauling systems, portaledge setup, safety practices, and expert insights for climbers of all levels." />
+        <meta name="keywords" content="big wall climbing, aid climbing, clean aid, pitons, hauling systems, portaledge, climbing techniques, climbing gear, yosemite climbing, el capitan" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Big Wall & Aid Climbing Techniques & Gear Guide | AlpinistHub" />
+        <meta property="og:description" content="Master big wall and aid climbing with our comprehensive guide covering techniques, essential gear, hauling systems, portaledge setup, and safety practices." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://alpinisthub.com/big-wall-aid" />
+        <meta property="og:image" content="/images/introduction-bigwall.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Big Wall & Aid Climbing Guide | AlpinistHub" />
+        <meta name="twitter:description" content="Master big wall and aid climbing with our comprehensive techniques and gear guide." />
+        <meta name="twitter:image" content="/images/introduction-bigwall.png" />
+        <link rel="canonical" href="https://alpinisthub.com/big-wall-aid" />
         <link rel="icon" href="/favicon.ico" />
+        <StructuredData data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Big Wall & Aid Climbing Techniques & Gear Guide",
+          "description": "Master big wall and aid climbing with our comprehensive guide covering techniques, essential gear, hauling systems, portaledge setup, and safety practices.",
+          "image": "https://alpinisthub.com/images/introduction-bigwall.png",
+          "author": {
+            "@type": "Organization",
+            "name": "AlpinistHub",
+            "url": "https://alpinisthub.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "AlpinistHub",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://alpinisthub.com/images/alpinisthub.png"
+            }
+          },
+          "datePublished": "2025-04-19",
+          "dateModified": "2025-04-19",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://alpinisthub.com/big-wall-aid"
+          }
+        }} />
       </Head>
 
       <nav className="navbar">

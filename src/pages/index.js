@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import HamburgerMenu from '../components/shared/HamburgerMenu';
+import StructuredData from '../components/shared/StructuredData';
 
 export default function Home() {
   // Define navigation items for both desktop and mobile menus
@@ -15,9 +16,34 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>AlpinistHub | Home</title>
-        <meta name="description" content="Expert information about climbing systems, techniques, and safety guides" />
+        <title>AlpinistHub | Expert Climbing Systems & Techniques Guide</title>
+        <meta name="description" content="Comprehensive resource for climbing systems, techniques, and safety guides. Learn about big wall climbing, aid climbing, rope soloing, and more." />
+        <meta name="keywords" content="climbing systems, aid climbing, big wall, rope soloing, climbing techniques, climbing safety, alpinist, climbing gear" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="AlpinistHub | Expert Climbing Systems & Techniques" />
+        <meta property="og:description" content="Comprehensive resource for climbing systems, techniques, and safety guides. Learn about big wall climbing, aid climbing, rope soloing, and more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alpinisthub.com" />
+        <meta property="og:image" content="/images/alpinisthub.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AlpinistHub | Expert Climbing Systems & Techniques" />
+        <meta name="twitter:description" content="Your comprehensive resource for climbing systems, techniques, and safety guides." />
+        <meta name="twitter:image" content="/images/alpinisthub.png" />
+        <link rel="canonical" href="https://alpinisthub.com" />
         <link rel="icon" href="/favicon.ico" />
+        <StructuredData data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "AlpinistHub",
+          "url": "https://alpinisthub.com",
+          "description": "Comprehensive resource for climbing systems, techniques, and safety guides.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://alpinisthub.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }} />
       </Head>
 
       <nav className="navbar">
