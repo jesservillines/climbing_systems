@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import HamburgerMenu from '../components/shared/HamburgerMenu';
 import StructuredData from '../components/shared/StructuredData';
+import { trackShopClick } from '../components/shared/AnalyticsTracker';
 
 export default function Home() {
   // Define navigation items for both desktop and mobile menus
@@ -147,11 +148,9 @@ export default function Home() {
                 From "Beta Spray" to "Send Train", express your climbing identity with our high-quality, 
                 weather-resistant designs.
               </p>
-              <Link href="/shop" className="btn btn-shop">
-                <span className="btn-icon-wrapper">
-                  <img src="/icons/shop.png" alt="" className="btn-icon" />
-                </span>
-                Check Out The Shop
+              <h3>Ready to get equipped?</h3>
+              <Link href="/shop">
+                <a className="btn btn-shop" onClick={() => trackShopClick('Home Page Shop Button')}>Check Out The Shop</a>
               </Link>
             </div>
           </div>
