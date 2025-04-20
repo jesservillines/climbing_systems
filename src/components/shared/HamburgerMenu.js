@@ -48,7 +48,11 @@ const HamburgerMenu = ({ navItems }) => {
           <ul>
             {navItems.map((item, index) => (
               <li key={index}>
-                <Link href={item.href} onClick={() => setIsOpen(false)}>
+                <Link 
+                  href={item.href} 
+                  onClick={() => setIsOpen(false)}
+                  className="nav-link"
+                >
                   {item.icon && (
                     <img 
                       src={item.icon} 
@@ -58,7 +62,7 @@ const HamburgerMenu = ({ navItems }) => {
                       height={24} 
                     />
                   )}
-                  {item.label}
+                  <span>{item.label}</span>
                 </Link>
               </li>
             ))}

@@ -149,9 +149,7 @@ export default function Home() {
                 weather-resistant designs.
               </p>
               <h3>Ready to get equipped?</h3>
-              <Link href="/shop">
-                <a className="btn btn-shop" onClick={() => trackShopClick('Home Page Shop Button')}>Check Out The Shop</a>
-              </Link>
+              <Link href="/shop" className="btn btn-shop" onClick={() => trackShopClick('Home Page Shop Button')}>Check Out The Shop</Link>
             </div>
           </div>
         </div>

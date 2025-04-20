@@ -24,7 +24,14 @@ export default function Document() {
               gtag('js', new Date());
               gtag('config', '${GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
+                cookie_domain: 'none',
+                debug_mode: true,
+                send_page_view: true,
+                // Enable tracking on localhost
+                cookieDomain: 'none',
+                transport_type: 'beacon'
               });
+              console.log('Google Analytics initialized with ID: ${GA_MEASUREMENT_ID}');
             `,
           }}
         />

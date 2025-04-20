@@ -10,15 +10,29 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    // Initialize Google Analytics
-    ReactGA.initialize(GA_MEASUREMENT_ID);
+    // Initialize Google Analytics with options to allow localhost tracking
+    ReactGA.initialize(GA_MEASUREMENT_ID, {
+      gaOptions: {
+        debug_mode: true,
+        cookieDomain: 'none'
+      },
+      testMode: process.env.NODE_ENV !== 'production',
+    });
     
     // Track initial page view
-    ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
+    ReactGA.send({
+      hitType: 'pageview',
+      page: window.location.pathname,
+      transport: 'beacon'
+    });
     
     // Track page views on route changes
     const handleRouteChange = (url) => {
-      ReactGA.send({ hitType: 'pageview', page: url });
+      ReactGA.send({
+        hitType: 'pageview',
+        page: url,
+        transport: 'beacon'
+      });
     };
     
     // Subscribe to route changes

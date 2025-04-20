@@ -195,9 +195,9 @@ export default function BigWallAid() {
             </Link>
           </li>
           <li>
-            <Link href="/shop">
+            <Link href="/shop" className="nav-link">
               <img src="/icons/shop.png" alt="" className="nav-icon" width={20} height={20} />
-              Shop
+              <span>Shop</span>
             </Link>
           </li>
         </ul>
@@ -254,23 +254,23 @@ export default function BigWallAid() {
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', gap: '1.5rem' }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img src="/icons/mountain.png" width={20} height={20} alt="Home" />
-            Home
+            <span>Home</span>
           </Link>
           <Link href="/big-wall-aid" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img src="/icons/mountain_destination.png" width={20} height={20} alt="Big Wall & Aid" />
-            Big Wall & Aid
+            <span>Big Wall & Aid</span>
           </Link>
           <Link href="/rope-soloing" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img src="/icons/carabiner.png" width={20} height={20} alt="Rope Soloing" />
-            Rope Soloing
+            <span>Rope Soloing</span>
           </Link>
           <Link href="/learn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img src="/icons/helmet.png" width={20} height={20} alt="Learn" />
-            Learn
+            <span>Learn</span>
           </Link>
           <Link href="/shop" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img src="/icons/shop.png" width={20} height={20} alt="Shop" />
-            Shop
+            <span>Shop</span>
           </Link>
         </div>
         <p>&copy; {new Date().getFullYear()} AlpinistHub.com. All rights reserved.</p>
