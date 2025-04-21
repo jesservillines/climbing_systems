@@ -3,6 +3,9 @@ import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   // Google Analytics 4 measurement ID
   const GA_MEASUREMENT_ID = 'G-8KRH61B0X0';
+  
+  // Google AdSense client ID
+  const ADSENSE_CLIENT_ID = 'ca-pub-9987696895438929';
 
   return (
     <Html lang="en">
@@ -15,6 +18,13 @@ export default function Document() {
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        
+        {/* Google AdSense */}
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+          crossOrigin="anonymous"
         />
         <script
           dangerouslySetInnerHTML={{

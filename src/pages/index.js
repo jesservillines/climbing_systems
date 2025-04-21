@@ -4,6 +4,7 @@ import { useState } from 'react';
 import HamburgerMenu from '../components/shared/HamburgerMenu';
 import StructuredData from '../components/shared/StructuredData';
 import { trackShopClick } from '../components/shared/AnalyticsTracker';
+import { BannerAd, InArticleAd, RectangleAd } from '../components/adsense';
 
 export default function Home() {
   // Define navigation items for both desktop and mobile menus
@@ -130,6 +131,9 @@ export default function Home() {
           </p>
         </header>
         
+        {/* Top Banner Ad */}
+        <BannerAd />
+        
 
 
         {/* Shop Promotion Section */}
@@ -206,8 +210,16 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        
+        {/* In-Article Ad after content grid */}
+        <InArticleAd />
       </main>
 
+      {/* Bottom Banner Ad before footer */}
+      <div className="container">
+        <BannerAd />
+      </div>
+      
       <footer className="container" style={{ textAlign: 'center', marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid #eaeaea' }}>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', gap: '1.5rem' }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
