@@ -37,50 +37,67 @@ export default function Shop() {
     setCart((prevCart) => [...prevCart, sticker]);
   };
   
-  // Handle successful payment
-  const handleApprove = (data, actions) => {
-    return actions.order.capture().then((details) => {
+  // Handle successful payment securely via server-side API
+  const handleApprove = async (data) => {
+    try {
+      // Call our backend API endpoint to capture the order
+      const response = await fetch('/api/paypal/capture-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          orderId: data.orderID
+        }),
+      });
+      
+      const orderData = await response.json();
+      
+      if (orderData.error) {
+        throw new Error(orderData.error);
+      }
+      
       // Clear cart after successful payment
       setCart([]);
       setShowCheckout(false);
       
       // In a real application, you would save the order details to your database here
-      console.log('Payment completed', details);
-      alert(`Thank you for your purchase! Order ID: ${details.id}`);
-    });
+      console.log('Payment completed', orderData);
+      alert(`Thank you for your purchase! Order ID: ${data.orderID}`);
+      
+      return orderData;
+    } catch (error) {
+      console.error('Error capturing PayPal order:', error);
+      alert('There was an error processing your payment. Please try again.');
+    }
   };
   
-  // Create PayPal order
-  const createOrder = (data, actions) => {
-    return actions.order.create({
-      purchase_units: [
-        {
-          description: 'AlpinistHub Merchandise',
-          amount: {
-            currency_code: 'USD',
-            value: cartTotal,
-            breakdown: {
-              item_total: {
-                currency_code: 'USD',
-                value: itemsTotal
-              },
-              shipping: {
-                currency_code: 'USD',
-                value: cart.length > 0 ? shippingCost.toFixed(2) : "0.00"
-              }
-            }
-          },
-          items: cart.map((item, index) => ({
-            name: item.name,
-            unit_amount: {
-              currency_code: 'USD',
-              value: item.price.toFixed(2)
-            },
-            quantity: '1'
-          }))
-        }
-      ]
-    });
+  // Create PayPal order securely via server-side API
+  const createOrder = async () => {
+    try {
+      // Call our backend API endpoint
+      const response = await fetch('/api/paypal/create-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          items: cart,
+          shipping: cart.length > 0 ? shippingCost.toFixed(2) : "0.00"
+        }),
+      });
+      
+      const orderData = await response.json();
+      
+      if (orderData.error) {
+        throw new Error(orderData.error);
+      }
+      
+      return orderData.id;
+    } catch (error) {
+      console.error('Error creating PayPal order:', error);
+      alert('There was an error processing your payment. Please try again.');
+    }
   };
   
   // Product data for hats
@@ -437,7 +454,7 @@ export default function Shop() {
                 </div>
                 <div className="paypal-button-container">
                   <PayPalScriptProvider options={{ 
-                    "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "AfgqG03olz-5iAEo6BjDDxXxU4ujID1ZyKp2nU89cmvdu-KEhY8YlpV-EU_y0fHwQ_Ruz_rrwefP62hG",
+                    "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
                     currency: "USD"
                   }}>
                     <PayPalButtons 
